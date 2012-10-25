@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#a:1:{s:23:"#__tienda_manufacturers";a:8:{s:15:"manufacturer_id";s:3:"int";s:17:"manufacturer_name";s:7:"varchar";s:18:"manufacturer_image";s:7:"varchar";s:20:"manufacturer_enabled";s:7:"tinyint";s:12:"created_date";s:8:"datetime";s:13:"modified_date";s:8:"datetime";s:24:"manufacturer_description";s:4:"text";s:19:"manufacturer_params";s:4:"text";}}

@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#a:1:{s:20:"#__tienda_taxclasses";a:6:{s:12:"tax_class_id";s:3:"int";s:14:"tax_class_name";s:7:"varchar";s:21:"tax_class_description";s:7:"varchar";s:8:"ordering";s:3:"int";s:12:"created_date";s:8:"datetime";s:13:"modified_date";s:8:"datetime";}}
