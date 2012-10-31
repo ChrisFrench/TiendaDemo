@@ -184,11 +184,11 @@ class TiendaModelEav extends TiendaModelBase
 	 * @param	boolean	$emptyState
 	 * @param	boolean	$getEav
 	 */
-	public function getItem( $emptyState = true, $getEav = true )
+	public function getItem( $refresh = true, $getEav = true, $emptyState=true )
 	{
-		if (empty( $this->_item ))
+		if (empty( $this->_item ) || $refresh)
 		{
-			$item = parent::getItem( $emptyState );
+			$item = parent::getItem( $refresh );
 
 			if (empty($item))
 			{
@@ -239,7 +239,7 @@ class TiendaModelEav extends TiendaModelBase
 	 */
 	public function getList($refresh = false, $getEav = true, $options = array())
 	{
-		if (empty( $this->_list ))
+		if (empty( $this->_list ) || $refresh )
 		{
 			$list = parent::getList($refresh);
 			// If no item in the list, return an array()

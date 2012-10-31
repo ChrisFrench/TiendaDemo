@@ -63,7 +63,13 @@ class TiendaHelperCategory extends TiendaHelperBase
         {
             // TODO This doesn't account for when templates are assigned to menu items.  Make it do so
             $db = JFactory::getDBO();
-            $db->setQuery( "SELECT `template` FROM #__templates_menu WHERE `menuid` = '0' AND `client_id` = '0';" );
+            if(version_compare(JVERSION,'1.6.0','ge')) {
+                // Joomla! 1.6+ code here
+                $db->setQuery( "SELECT `template` FROM #__template_styles WHERE `home` = '1' AND `client_id` = '0';" );
+            } else {
+                // Joomla! 1.5 code here
+                $db->setQuery( "SELECT `template` FROM #__templates_menu WHERE `menuid` = '0' AND `client_id` = '0';" );
+            }
             $template = $db->loadResult();
         }
             else
@@ -137,9 +143,14 @@ class TiendaHelperCategory extends TiendaHelperBase
         {
             if ($app->isAdmin())
             {
-                $template = $app->getTemplate();
                 $db = JFactory::getDBO();
-                $db->setQuery( "SELECT `template` FROM #__templates_menu WHERE `menuid` = '0' AND `client_id` = '0';" );
+                if(version_compare(JVERSION,'1.6.0','ge')) {
+                    // Joomla! 1.6+ code here
+                    $db->setQuery( "SELECT `template` FROM #__template_styles WHERE `home` = '1' AND `client_id` = '0';" );
+                } else {
+                    // Joomla! 1.5 code here
+                    $db->setQuery( "SELECT `template` FROM #__templates_menu WHERE `menuid` = '0' AND `client_id` = '0';" );
+                }
                 $template = $db->loadResult();
             }
                 else
@@ -226,7 +237,7 @@ class TiendaHelperCategory extends TiendaHelperBase
 		{
 			// then this is a filename, return the full img tag if file exists, otherwise use a default image
 			$src = (JFile::exists( Tienda::getPath( $path ).DS.$id))
-				? Tienda::getUrl( $path ).$id : JURI::root(true). '/media/com_tienda/images/noimage.png';
+				? Tienda::getUrl( $path ).$id : JURI::root(true).'/media/com_tienda/images/noimage.png';
 			
 			// if url is true, just return the url of the file and not the whole img tag
 			$tmpl = ($url)
@@ -244,7 +255,7 @@ class TiendaHelperCategory extends TiendaHelperBase
 				$id = $row->category_full_image;
 
 				$src = (JFile::exists( Tienda::getPath( $path ).DS.$row->category_full_image))
-					? Tienda::getUrl( $path ).$id : JURI::root(true). '/media/com_tienda/images/noimage.png';
+					? Tienda::getUrl( $path ).$id : JURI::root(true).'/media/com_tienda/images/noimage.png';
 
 				// if url is true, just return the url of the file and not the whole img tag
 				$tmpl = ($url)

@@ -15,6 +15,8 @@ Tienda::load( 'TiendaModelBase', 'models._base' );
 
 class TiendaModelShippingMethods extends TiendaModelBase 
 {
+    public $cache_enabled = false;
+     
     protected function _buildQueryWhere(&$query)
     {
 		$filter         = $this->getState('filter');
@@ -76,7 +78,7 @@ class TiendaModelShippingMethods extends TiendaModelBase
     	if ( strlen($filter_subtotal ))
         {
             $query->where('tbl.subtotal_minimum <= '. $filter_subtotal);
-            $query->where('( ( tbl.subtotal_maximum = -1 ) OR ( ( tbl.subtotal_maximum <> -1 ) AND ( tbl.subtotal_maximum >= '.$filter_subtotal.' ) ) )');
+            $query->where('( ( tbl.subtotal_maximum = 0.00000 ) OR ( tbl.subtotal_maximum = -1 ) OR ( ( tbl.subtotal_maximum <> -1 ) AND ( tbl.subtotal_maximum >= '.$filter_subtotal.' ) ) )');
         }
     }
 
