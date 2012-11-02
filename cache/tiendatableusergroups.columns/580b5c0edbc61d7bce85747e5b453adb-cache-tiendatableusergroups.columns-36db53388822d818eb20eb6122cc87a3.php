@@ -1,1 +1,0 @@
-<?php die("Access Denied"); ?>#x#a:1:{s:23:"#__tienda_usergroupxref";a:2:{s:8:"group_id";s:3:"int";s:7:"user_id";s:3:"int";}}
