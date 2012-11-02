@@ -9,12 +9,12 @@ class JConfig {
 	public $captcha = '0';
 	public $list_limit = '20';
 	public $access = '1';
-	public $debug = '1';
+	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysqli';
 	public $host = 'localhost';
 	public $user = 'root';
-	public $password = 'F0rgetting01';
+	public $password = 'chris01';
 	public $db = 'tienda';
 	public $dbprefix = 'plo1j_';
 	public $live_site = '';
@@ -53,8 +53,8 @@ class JConfig {
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
-	public $log_path = '/var/projects/tienda/logs';
-	public $tmp_path = '/var/projects/tienda/tmp';
+	public $log_path = '/Users/chris/Documents/Aptana Studio 3 Workspace/TiendaDemo/logs';
+	public $tmp_path = '/Users/chris/Documents/Aptana Studio 3 Workspace/TiendaDemo/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 	public $MetaRights = '';

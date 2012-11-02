@@ -1,1 +1,0 @@
-<?php die("Access Denied"); ?>#x#a:1:{s:23:"#__tienda_eavvaluestext";a:7:{s:11:"eavvalue_id";s:3:"int";s:15:"eavattribute_id";s:3:"int";s:14:"eaventity_type";s:7:"varchar";s:12:"eaventity_id";s:3:"int";s:14:"eavvalue_value";s:4:"text";s:12:"created_date";s:8:"datetime";s:13:"modified_date";s:8:"datetime";}}

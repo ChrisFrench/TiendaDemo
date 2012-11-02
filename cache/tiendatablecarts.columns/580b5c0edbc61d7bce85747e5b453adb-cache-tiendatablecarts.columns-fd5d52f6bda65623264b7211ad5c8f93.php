@@ -1,1 +1,0 @@
-<?php die("Access Denied"); ?>#x#a:1:{s:15:"#__tienda_carts";a:9:{s:7:"cart_id";s:3:"int";s:7:"user_id";s:3:"int";s:10:"session_id";s:7:"varchar";s:10:"product_id";s:3:"int";s:9:"vendor_id";s:3:"int";s:18:"product_attributes";s:4:"text";s:11:"product_qty";s:3:"int";s:12:"last_updated";s:9:"timestamp";s:15:"cartitem_params";s:4:"text";}}
