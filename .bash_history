@@ -19,3 +19,17 @@ mv tienda.sql sql/
 git add .
 git commit -a -m "Adding Tienda library, and Database dumps"
 git push
+mysqldump -uroot -pF0rgetting01 --skip-extended-insert tienda > tienda.sql
+git add .
+git commit -a -m " updating latest version of tienda"
+git push
+git push
+git ad .
+git add .
+git add -a -m "Add latest  library fixes"
+git commit -a -m "Add latest  library fixes"
+git config --global user.name "Tienda Demo"
+git config --global user.email "teindademo@ammonitenetworks.com"
+ git commit --amend --reset-author
+git push
+su

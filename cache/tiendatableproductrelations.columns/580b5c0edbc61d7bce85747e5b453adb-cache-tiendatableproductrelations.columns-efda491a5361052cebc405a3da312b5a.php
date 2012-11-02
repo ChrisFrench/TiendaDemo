@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#a:1:{s:26:"#__tienda_productrelations";a:4:{s:18:"productrelation_id";s:3:"int";s:15:"product_id_from";s:3:"int";s:13:"product_id_to";s:3:"int";s:13:"relation_type";s:7:"varchar";}}
