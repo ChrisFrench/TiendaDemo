@@ -33,3 +33,7 @@ git config --global user.email "teindademo@ammonitenetworks.com"
  git commit --amend --reset-author
 git push
 su
+ls
+mysqldump -uroot -pF0rgetting01 --skip-extended-insert tienda > tienda.sql
+mysqldump -uroot -pF0rgetting01 --skip-extended-insert tienda > sql/tienda.sql
+exit
