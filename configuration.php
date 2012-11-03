@@ -20,7 +20,7 @@ class JConfig {
 	public $live_site = '';
 	public $secret = 'zDurKO8OXF1dnEKT';
 	public $gzip = '0';
-	public $error_reporting = 'default';
+	public $error_reporting = 'development';
 	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help{major}{minor}:{keyref}';
 	public $ftp_host = '127.0.0.1';
 	public $ftp_port = '21';
@@ -48,14 +48,14 @@ class JConfig {
 	public $MetaAuthor = '1';
 	public $MetaVersion = '0';
 	public $robots = '';
-	public $sef = '1';
+	public $sef = '0';
 	public $sef_rewrite = '0';
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $log_path = '/Users/chris/Documents/Aptana Studio 3 Workspace/TiendaDemo/logs';
 	public $tmp_path = '/Users/chris/Documents/Aptana Studio 3 Workspace/TiendaDemo/tmp';
-	public $lifetime = '15';
+	public $lifetime = '15000';
 	public $session_handler = 'database';
 	public $MetaRights = '';
 	public $sitename_pagetitles = '0';

@@ -506,7 +506,8 @@
 
     	<?php
     	if (!empty($histories))
-    	{ 
+    	{
+    		FB::log('something'); 
     	?>
         <div id="orderhistory">
         <fieldset>
