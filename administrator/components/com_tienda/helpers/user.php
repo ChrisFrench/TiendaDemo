@@ -282,10 +282,8 @@ class TiendaHelperUser extends DSCHelperUser
 			$core_user_new_gid = $product->product_parameters->get('core_user_new_gid');
 			if (!empty($core_user_change_gid))
 			{
-				$user = new JUser();
-				$user->load( $order->user_id );
-				$user->gid = $core_user_new_gid;
-				$user->save();
+				
+				DSCAcl::addgroup( $order->user_id,$core_user_new_gid);
 			}
 		}
 	}
