@@ -5,3 +5,4 @@ configuration.php
 /cache
 /administrator/cache
 /tmp
+.htaccess
