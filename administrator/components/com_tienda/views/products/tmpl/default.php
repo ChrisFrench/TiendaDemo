@@ -12,18 +12,8 @@
 <form action="<?php echo JRoute::_( @$form['action'] )?>" method="post" name="adminForm" id="adminForm" enctype="multipart/form-data">
 
 	<?php echo TiendaGrid::pagetooltip( JRequest::getVar('view') ); ?>
-
-    <table>
-        <tr>
-            <td align="left" width="100%">
-            </td>
-            <td nowrap="nowrap">
-                <input type="text" name="filter" value="<?php echo @$state->filter; ?>" />
-                <button class="btn btn-primary" onclick="this.form.submit();"><?php echo JText::_('COM_TIENDA_SEARCH'); ?></button>
-                <button class="btn btn-danger"onclick="tiendaFormReset(this.form);"><?php echo JText::_('COM_TIENDA_RESET'); ?></button>
-            </td>
-        </tr>
-    </table>
+	<?php echo TiendaGrid::searchform(@$state->filter,JText::_('COM_TIENDA_SEARCH'), JText::_('COM_TIENDA_RESET') ) ?>
+	
 
 	<table class="table table-striped table-bordered" style="clear: both;">
 		<thead>
@@ -87,10 +77,10 @@
                 <th>
                 	<div class="range">
 	                	<div class="rangeline">
-	                		<span class="label"><?php echo JText::_('COM_TIENDA_FROM'); ?>:</span> <input  type="text"id="filter_price_from" name="filter_price_from" value="<?php echo @$state->filter_price_from; ?>" size="5" class="input" />
+	                		<span class="label"><?php echo JText::_('COM_TIENDA_FROM'); ?>:</span> <input  type="text"id="filter_price_from" name="filter_price_from" value="<?php echo @$state->filter_price_from; ?>" size="5" class="input input-tiny" />
 	                	</div>
 	                	<div class="rangeline">
-	                		<span class="label"><?php echo JText::_('COM_TIENDA_TO'); ?>:</span> <input type="text" id="filter_price_to" name="filter_price_to" value="<?php echo @$state->filter_price_to; ?>" size="5" class="input" />
+	                		<span class="label"><?php echo JText::_('COM_TIENDA_TO'); ?>:</span> <input type="text" id="filter_price_to" name="filter_price_to" value="<?php echo @$state->filter_price_to; ?>" size="5" class="input input-tiny" />
 	                	</div>
                 	</div>
                 </th>

@@ -31,7 +31,7 @@ class TiendaControllerPOS extends TiendaController
 		$this->registerTask( 'flag_deleted', 'flag' );
 	}
 	
-	function display($cachable=false)
+	function display($cachable=false, $urlparams = false)
 	{
 		$post = JRequest::get('post');
 		$step = JRequest::getVar('nextstep', 'step1');
@@ -55,7 +55,7 @@ class TiendaControllerPOS extends TiendaController
 		{
 			$this->$method_name($post);
 		}
-		parent::display();
+		parent::display($cachable, $urlparams);
 	}
 
 	/**
@@ -168,7 +168,7 @@ class TiendaControllerPOS extends TiendaController
 		$session = JFactory::getSession();
 		$subtask = $session->get('subtask', 'shipping', 'tienda_pos');
 
-		$order = &$this->populateOrder();
+		$order = $this->populateOrder();
 		$view = $this->getView('pos', 'html');
 		$view->assign('step1_inactive', $this->step1Inactive());
 
@@ -318,7 +318,7 @@ class TiendaControllerPOS extends TiendaController
 		}
 		
 		// remove unnecessary _db proprety which causes 'Request-URI Too Large' error
-		unset($order->orderinfo->_db);
+		//unset($order->orderinfo->_db);
 		
 		// send the order_id and orderpayment_id to the payment plugin so it knows which DB record to update upon successful payment
 		$values["order_id"]             = $order->order_id;
@@ -364,7 +364,7 @@ class TiendaControllerPOS extends TiendaController
 		$view->assign('shipping_info', $shipping_address);
 		$view->assign('billing_info', $billing_address);
 		$view->assign('shipping_method_name',$shippingMethodName);
-		$view->assign( 'showShipping', $showShipping );		
+		$view->assign('showShipping', $showShipping );		
 		$view->assign('step1_inactive', $this->step1Inactive());	
 		$view->assign('values', $values);
 		//calculate the order totals as we already have the shipping
@@ -986,7 +986,7 @@ class TiendaControllerPOS extends TiendaController
         }
         
         // get the order object so we can populate it
-        $order = &$this->populateOrder();	
+        $order = $this->populateOrder();	
 
         // bind what you can from the post
         $order->bind( $values );
@@ -1334,7 +1334,7 @@ class TiendaControllerPOS extends TiendaController
 
 		$model = $this->getModel('Carts');
 		$model->setState('filter_user', $user_id);
-		$items = &$model->getList();
+		$items = $model->getList();
 
 		if(!empty($items))
 		{
@@ -1378,7 +1378,7 @@ class TiendaControllerPOS extends TiendaController
 	/**
 	 * Method to remove items or updated the quantities to a cart
 	 */
-	function update()
+	function removeItems()
 	{
 		$model = $this->getModel('carts');
 		$post = JRequest::get('post');
@@ -1388,10 +1388,8 @@ class TiendaControllerPOS extends TiendaController
 
 		$session = JFactory::getSession();
 		$user_id = $session->get('user_id', '', 'tienda_pos');
-
-		if(isset($post['remove']))
-		{
-			foreach($cids as $cart_id => $product_id)
+		
+		foreach($cids as $cart_id => $product_id)
 			{
 				$row = $model->getTable();
 				$ids = array('user_id' => $user_id,
@@ -1410,9 +1408,23 @@ class TiendaControllerPOS extends TiendaController
 					$dispatcher->trigger('onRemoveFromCart', array($item));
 				}
 			}
-		}
-		elseif($post['update'])
-		{
+			
+
+		
+		$this->setRedirect("index.php?option=com_tienda&view=pos&nextstep=step2");
+	}
+
+	function updateQty()
+	{
+		$model = $this->getModel('carts');
+		$post = JRequest::get('post');
+		$cids = JRequest::getVar('cid', array(0), '', 'ARRAY');
+		$product_attributes = JRequest::getVar('product_attributes', array(0), '', 'ARRAY');
+		$quantities = JRequest::getVar('quantities', array(0), '', 'ARRAY');
+
+		$session = JFactory::getSession();
+		$user_id = $session->get('user_id', '', 'tienda_pos');
+		
 			foreach($quantities as $cart_id => $value)
 			{
 				$carts = JTable::getInstance('Carts', 'TiendaTable');
@@ -1491,9 +1503,11 @@ class TiendaControllerPOS extends TiendaController
 				}
 
 			}
-		}
-		$this->setRedirect("index.php?option=com_tienda&view=pos&nextstep=step2");
-	}
+	$this->setRedirect("index.php?option=com_tienda&view=pos&nextstep=step2");		
+}
+		
+		
+
 
 	/**
 	 * Adjusts cart quantities based on availability
@@ -2144,7 +2158,7 @@ class TiendaControllerPOS extends TiendaController
 			return;
 		}
 
-		$order = &$this->populateOrder();		
+		$order = $this->populateOrder();		
 		
 		$this->setAddresses( $order , $submitted_values, false );
 	
@@ -2904,6 +2918,8 @@ class TiendaControllerPOS extends TiendaController
 	 */
 	function cancel()
 	{
+		
+		$this->redirect = 'index.php?option=com_tienda&view=orders';	
 	    parent::cancel();		
 		
 		// Clear all of the session POS values

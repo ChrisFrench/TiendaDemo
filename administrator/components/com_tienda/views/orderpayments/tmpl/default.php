@@ -9,17 +9,8 @@
 
 	<?php echo TiendaGrid::pagetooltip( JRequest::getVar('view') ); ?>
 	
-     <table>
-        <tr>
-            <td align="left" width="100%">
-            </td>
-            <td nowrap="nowrap">
-                <input type="text" name="filter" value="<?php echo @$state->filter; ?>" />
-                <button class="btn btn-primary" onclick="this.form.submit();"><?php echo JText::_('COM_TIENDA_SEARCH'); ?></button>
-                <button class="btn btn-danger" onclick="tiendaFormReset(this.form);"><?php echo JText::_('COM_TIENDA_RESET'); ?></button>
-            </td>
-        </tr>
-    </table>
+     <?php echo TiendaGrid::searchform(@$state->filter,JText::_('COM_TIENDA_SEARCH'), JText::_('COM_TIENDA_RESET') ) ?>
+	
 
 	<table class="table table-striped table-bordered" style="clear: both;">
 		<thead>
@@ -93,7 +84,9 @@
                     </div>
                 </th>
                 <th>
-                    <input id="filter_type" name="filter_type" value="<?php echo @$state->filter_type; ?>" size="25"/>
+
+                	<?php echo  TiendaSelect::paymentType(@$state->filter_type,'filter_type'); ?>
+           
                 </th>
                 <th>
                     <input id="filter_transaction" name="filter_transaction" value="<?php echo @$state->filter_transaction; ?>" size="25"/>
@@ -159,7 +152,7 @@
                     <?php } ?>
 				</td>
 				<td style="text-align: center;">
-					<?php echo $item->orderpayment_type; ?>
+					<?php  echo JText::_($item->orderpayment_type); ; ?>
 				</td>
                 <td style="text-align: center;">
                     <?php echo $item->transaction_id; ?>

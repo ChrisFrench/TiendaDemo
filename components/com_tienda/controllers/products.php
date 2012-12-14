@@ -805,7 +805,7 @@ class TiendaControllerProducts extends TiendaController
         }
 
         // convert elements to array that can be binded
-        $values = TiendaHelperBase::elementsToArray( $elements );
+        $values = $helper->elementsToArray( $elements );
         $product_id = !empty( $values['product_id'] ) ? ( int ) $values['product_id'] : JRequest::getInt( 'product_id' );
         $product_qty = !empty( $values['product_qty'] ) ? ( int ) $values['product_qty'] : '1';
 
@@ -2140,13 +2140,14 @@ class TiendaControllerProducts extends TiendaController
     function uploadifyImage( )
     {
         $product_id = JRequest::getInt( 'product_id', 0 );
-
+		
+		
         if ( $product_id )
         {
             Tienda::load( 'TiendaImage', 'library.image' );
             $upload = new TiendaImage( );
             // handle upload creates upload object properties
-            $upload->handleUpload( 'uploadify_image' );
+            $upload->handleUpload( 'Filedata' );
             	
             // then save image to appropriate folder
             $product = JTable::getInstance( 'Products', 'TiendaTable' );

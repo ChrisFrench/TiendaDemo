@@ -170,6 +170,36 @@ class TiendaSelect extends DSCSelect
         
         return self::genericlist($list, $name, $attribs, 'value', 'text', $selected, $idtag );
     }
+	 /**
+    * Generates a created/modified select list
+    *
+    * @param string The value of the HTML name attribute
+    * @param string Additional HTML attributes for the <select> tag
+    * @param mixed The key that is selected
+    * @returns string HTML for the radio list
+    */
+    public static function paymentType( $selected, $name = 'filter_type', $attribs = array('class' => 'inputbox'), $idtag = null, $allowAny = false, $title='COM_TIENDA_SELECT_TYPE' )
+    {
+        $list = array();
+        if($allowAny) {
+            $list[] =  self::option('', "- ".JText::_( $title )." -" );
+        }
+		 $db = JFactory::getDbo();
+        $q = new DSCQuery();
+        
+        $q->select( 'SELECT DISTINCT orderpayment_type as type' );
+        $q->from( '#__tienda_orderpayments' );
+        
+	      $db->setQuery( $q );
+        $items = $db->loadObjectList();
+		
+		foreach($items as $item) {
+			$list[] = JHTML::_('select.option',  $item->type, JText::_($item->type) );
+		}
+        
+        
+        return self::genericlist($list, $name, $attribs, 'value', 'text', $selected, $idtag );
+    }
     
 	/**
 	 *
@@ -180,7 +210,7 @@ class TiendaSelect extends DSCSelect
 	 * @param $allowAny
 	 * @return unknown_type
 	 */
-	public static function category($selected, $name = 'filter_parentid', $attribs = array('class' => 'inputbox'), $idtag = null, $allowAny = false, $allowNone = false, $title = 'Select Category', $title_none = 'COM_TIENDA_NO_PARENT', $enabled = null )
+	public static function category($selected, $name = 'filter_parentid', $attribs = array('class' => 'inputbox'), $idtag = null, $allowAny = false, $allowNone = false, $title = 'Select Category', $title_none = 'COM_TIENDA_NO_PARENT', $enabled = null, $disabled = array() )
  	{
 		// Build list
         $list = array();
@@ -217,8 +247,14 @@ class TiendaSelect extends DSCSelect
         	{
         		$level = 1;
         	}
-        	$list[] =  self::option( $item->category_id, str_repeat( '.&nbsp;', $level-1 ).JText::_($item->name), 'category_id', 'category_name' );
-        }
+			$disable = false;
+			if(in_array($item->category_id,$disabled)) {
+			$disable = true;	
+			}
+			
+        	$list[] =  self::option( $item->category_id, str_repeat( '.&nbsp;', $level-1 ).JText::_($item->name), 'category_id', 'category_name', $disable );
+       		
+	    }
 		return self::genericlist($list, $name, $attribs, 'category_id', 'category_name', $selected, $idtag );
  	}
 
@@ -1170,6 +1206,7 @@ class TiendaSelect extends DSCSelect
         $list[] = JHTML::_('select.option',  'text', JText::_('COM_TIENDA_TEXTAREA') );
         $list[] = JHTML::_('select.option',  'decimal', JText::_('COM_TIENDA_DECIMAL') );
         $list[] = JHTML::_('select.option',  'datetime', JText::_('COM_TIENDA_DATE_TIME') );
+        //$list[] = JHTML::_('select.option',  'time', JText::_('COM_TIENDA_TIME') ); // NO NEW FEATURES YET
         $list[] = JHTML::_('select.option',  'bool', JText::_('COM_TIENDA_BOOLEAN') );
         
         return self::genericlist($list, $name, $attribs, 'value', 'text', $selected, $idtag );

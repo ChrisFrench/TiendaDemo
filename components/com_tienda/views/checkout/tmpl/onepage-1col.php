@@ -139,7 +139,7 @@
 					<!--    SHIPPING ADDRESS  -->	         
 	                <?php if (empty($this->shipping_address)) : ?>
 	                    <div>
-	                        <input id="sameasbilling" name="sameasbilling" type="checkbox" checked="checked" onclick="tiendaShowHideDiv( 'shipping_input_addressForm' );"/>&nbsp;
+	                        <input id="sameasbilling" name="sameasbilling" type="checkbox" checked="checked" onclick="tiendaShowHideDiv( 'shipping_input_addressForm' ); tiendaGetShippingRates( 'onCheckoutShipping_wrapper', document.adminForm ); tiendaGetPaymentOptions( 'onCheckoutPayment_wrapper', document.adminForm ); "/>&nbsp;
 	                        <?php echo JText::_('COM_TIENDA_SAME_AS_BILLING_ADDRESS'); ?>
 	                    </div>
 					<?php endif; ?>
@@ -362,7 +362,7 @@ window.addEvent('domready', function() {
 <?php if( $this->showShipping  ):?>	
 	tiendaShowHideDiv( 'shipping_input_addressForm' );
 	<?php if( !@$this->shipping_address->address_id ): ?>
-		$( 'sameasbilling' ).addEvent( 'change', function() { tiendaCopyBillingAdToShippingAd( document.getElementById( 'sameasbilling' ), document.adminForm, '<?php echo JText::_('COM_TIENDA_UPDATING_SHIPPING_RATES')?>', '<?php echo JText::_('COM_TIENDA_UPDATING_CART')?>', '<?php echo JText::_('COM_TIENDA_UPDATING_ADDRESS')?>', '<?php echo JText::_('COM_TIENDA_UPDATING_PAYMENT_METHODS')?>' ) } );
+	document.id( 'sameasbilling' ).addEvent( 'change', function() { tiendaCopyBillingAdToShippingAd( document.getElementById( 'sameasbilling' ), document.adminForm, '<?php echo JText::_('COM_TIENDA_UPDATING_SHIPPING_RATES')?>', '<?php echo JText::_('COM_TIENDA_UPDATING_CART')?>', '<?php echo JText::_('COM_TIENDA_UPDATING_ADDRESS')?>', '<?php echo JText::_('COM_TIENDA_UPDATING_PAYMENT_METHODS')?>' ) } );
 	<?php endif; ?>
 <?php endif; ?>
 

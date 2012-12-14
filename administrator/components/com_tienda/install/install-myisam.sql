@@ -552,13 +552,13 @@ COLLATE = utf8_general_ci;
 -- Table `#__tienda_orderhistory`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `#__tienda_orderhistory` (
-  `order_history_id` INT(11) NOT NULL AUTO_INCREMENT ,
+  `orderhistory_id` INT(11) NOT NULL AUTO_INCREMENT ,
   `order_id` INT(11) NOT NULL DEFAULT '0' ,
   `order_state_id` INT(11) NOT NULL ,
   `date_added` DATETIME NOT NULL ,
   `notify_customer` INT(1) NULL DEFAULT '0' ,
   `comments` TEXT NULL DEFAULT NULL ,
-  PRIMARY KEY (`order_history_id`) ,
+  PRIMARY KEY (`orderhistory_id`) ,
   INDEX `fk_OrderState_OrderHistory` (`order_state_id` ASC) ,
   INDEX `fk_Orders_OrderHistory` (`order_id` ASC)
 )
@@ -1394,6 +1394,29 @@ CREATE TABLE  IF NOT EXISTS `#__tienda_eavvaluesdecimal` (
 `modified_date` DATETIME NOT NULL ,
 INDEX (  `eavattribute_id` ,  `eaventity_id` ),
 CONSTRAINT `fk_eavvaluesdecimal_eavattribute`
+    FOREIGN KEY (`eavattribute_id` )
+    REFERENCES `#__tienda_eavattributes` (`eavattribute_id` )
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+)
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+-- -----------------------------------------------------
+-- Table `#__tienda_eavvaluestime`
+-- -----------------------------------------------------
+
+CREATE TABLE  IF NOT EXISTS `#__tienda_eavvaluestime` (
+`eavvalue_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`eavattribute_id` INT NOT NULL ,
+`eaventity_type` VARCHAR( 255 ) NOT NULL COMMENT 'table name of the entity',
+`eaventity_id` INT NOT NULL ,
+`eavvalue_value` TIME NOT NULL ,
+`created_date` DATETIME NOT NULL ,
+`modified_date` DATETIME NOT NULL ,
+INDEX (  `eavattribute_id` ,  `eaventity_id` ),
+CONSTRAINT `fk_eavvaluestime_eavattribute`
     FOREIGN KEY (`eavattribute_id` )
     REFERENCES `#__tienda_eavattributes` (`eavattribute_id` )
     ON DELETE CASCADE

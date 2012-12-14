@@ -143,26 +143,26 @@ class Tienda extends DSC
 	public $ask_question_modal					= '1';
 
 	//address management
-	public $show_field_address_name					= '3';
-	public $show_field_title					= '3';
+	public $show_field_address_name					= '0';
+	public $show_field_title					= '0';
 	public $show_field_name					= '3';
-	public $show_field_middle					= '3';
+	public $show_field_middle					= '0';
 	public $show_field_last					= '3';
-	public $show_field_company					= '3';
-	public $show_field_tax_number					= '3';
+	public $show_field_company					= '0';
+	public $show_field_tax_number					= '0';
 	public $show_field_address1				= '3';
-	public $show_field_address2				= '3';
+	public $show_field_address2				= '0';
 	public $show_field_zone					= '3';
 	public $show_field_country					= '3';
 	public $show_field_city					= '3';
 	public $show_field_zip						= '3';
-	public $show_field_phone					= '3';
-	public $show_field_cell					= '3';
-	public $show_field_fax						= '3';
+	public $show_field_phone					= '0';
+	public $show_field_cell					= '0';
+	public $show_field_fax						= '0';
 
 	// address validation management
-	public $validate_field_address_name				= '3';
-	public $validate_field_title				= '3';
+	public $validate_field_address_name				= '0';
+	public $validate_field_title				= '0';
 	public $validate_field_name				= '3';
 	public $validate_field_middle				= '0';
 	public $validate_field_last				= '3';
@@ -233,8 +233,8 @@ class Tienda extends DSC
 	public $secret_word = '';
 	public $password_min_length = '5';
 	public $password_req_alpha = '1';
-	public $password_req_num = '1';
-	public $password_req_spec = '1';
+	public $password_req_num = '0';
+	public $password_req_spec = '0';
 	public $password_php_validate = '1';
 	public $content_plugins_product_desc = '0';
 	public $lower_filename = '1';
@@ -465,6 +465,44 @@ class Tienda extends DSC
 		$root['path']   = rtrim($uri->toString( array('path') ), '/\\');
 		
 		return $root['prefix'].$root['path'].'/';
+	}
+	
+	/**
+	 * Returns the result of the named function if it exists,
+	 * otherwise returns a property of the object or the default value if the property is not set.
+	 *
+	 * @param   string  $property  The name of the property.
+	 * @param   mixed   $default   The default value.
+	 *
+	 * @return  mixed    The value of the property.
+	 *
+	 * @since   11.1
+	 *
+	 * @see     getProperties()
+	 */
+	public function get($property, $default = null)
+	{
+	    if (method_exists($this, 'get'.$property)) 
+	    {
+	        $method_name = 'get'.$property;
+	        return $this->{$method_name}($default);
+	    }
+	        
+	    return parent::get($property, $default);
+	}
+	
+	/**
+	 * 
+	 */
+	public function getDate_Format($default=null)
+	{
+	    if(version_compare(JVERSION,'1.6.0','ge')) {
+	        // Joomla! 1.6+ code here
+	        return parent::get('date_format_act', $default);
+	    } else {
+	        // Joomla! 1.5 code here
+	        return parent::get('date_format', $default);
+	    }
 	}
 } 
 

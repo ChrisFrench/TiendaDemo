@@ -7,6 +7,7 @@
     Tienda::load( 'TiendaHelperBase', 'helpers._base' );
     $helper_product = TiendaHelperBase::getInstance( 'Product' );
     $attributes = $helper_product->getAttributes( $row->product_id, 0 );
+	
     $default = $helper_product->getDefaultAttributeOptions($attributes);
     $selected_opts = array();
     foreach ($attributes as $attribute)
@@ -39,7 +40,7 @@
     <?php echo JText::_('COM_TIENDA_BASE_PRICE'); ?>: <?php echo TiendaHelperBase::currency( $row->price ); ?>
     <br/>
     
-    <input type="submit" name="add_to_cart" value="<?php echo JText::_('COM_TIENDA_ADD_TO_ORDER'); ?>" class="button" />
+    <input type="submit" name="add_to_cart" value="<?php echo JText::_('COM_TIENDA_ADD_TO_ORDER'); ?>" class="btn btn-success" />
     <input type="hidden" name="task" id="task" value="addtocart" />
     <input type="hidden" name="product_id" value="<?php echo $row->product_id; ?>" />
 </div>

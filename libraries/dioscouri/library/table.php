@@ -278,10 +278,8 @@ class DSCTable extends JTable
 		}
 
 		$app = $this->get('_app');
-		
 		if ( empty($app) || DSC::getApp( $app )->get('enable_reorder_table', '1') )
 		{
-			
 			$this->reorder();
 		}
 

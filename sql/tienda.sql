@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.25, for osx10.6 (i386)
+-- MySQL dump 10.13  Distrib 5.5.28, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: tienda
 -- ------------------------------------------------------
--- Server version	5.5.25
+-- Server version	5.5.28-0ubuntu0.12.04.2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -360,9 +360,9 @@ CREATE TABLE `plo1j_banners` (
 
 LOCK TABLES `plo1j_banners` WRITE;
 /*!40000 ALTER TABLE `plo1j_banners` DISABLE KEYS */;
-INSERT INTO `plo1j_banners` VALUES (2,3,0,'Shop 1','shop-1',0,506,2,'http://shop.joomla.org/amazoncom-bookstores.html',1,15,'Get books about Joomla! at the Joomla! Book Shop.','',0,1,'','{\"imageurl\":\"images\\/banners\\/white.png\",\"width\":\"\",\"height\":\"\",\"alt\":\"Joomla! Books\"}',0,'',-1,0,0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2011-01-01 00:00:01','en-GB');
-INSERT INTO `plo1j_banners` VALUES (3,2,0,'Shop 2','shop-2',0,556,2,'http://shop.joomla.org',1,15,'T Shirts, caps and more from the Joomla! Shop.','',0,2,'','{\"imageurl\":\"images\\/banners\\/white.png\",\"width\":\"\",\"height\":\"\",\"alt\":\"Joomla! Shop\"}',0,'',-1,0,0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2011-01-01 00:00:01','en-GB');
-INSERT INTO `plo1j_banners` VALUES (4,1,0,'Support Joomla!','support-joomla',0,475,1,'http://contribute.joomla.org',1,15,'Your contributions of time, talent and money make Joomla possible.','',0,3,'','{\"imageurl\":\"images\\/banners\\/white.png\",\"width\":\"\",\"height\":\"\",\"alt\":\"\"}',0,'',-1,0,0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','en-GB');
+INSERT INTO `plo1j_banners` VALUES (2,3,0,'Shop 1','shop-1',0,560,2,'http://shop.joomla.org/amazoncom-bookstores.html',1,15,'Get books about Joomla! at the Joomla! Book Shop.','',0,1,'','{\"imageurl\":\"images\\/banners\\/white.png\",\"width\":\"\",\"height\":\"\",\"alt\":\"Joomla! Books\"}',0,'',-1,0,0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2011-01-01 00:00:01','en-GB');
+INSERT INTO `plo1j_banners` VALUES (3,2,0,'Shop 2','shop-2',0,610,2,'http://shop.joomla.org',1,15,'T Shirts, caps and more from the Joomla! Shop.','',0,2,'','{\"imageurl\":\"images\\/banners\\/white.png\",\"width\":\"\",\"height\":\"\",\"alt\":\"Joomla! Shop\"}',0,'',-1,0,0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2011-01-01 00:00:01','en-GB');
+INSERT INTO `plo1j_banners` VALUES (4,1,0,'Support Joomla!','support-joomla',0,529,1,'http://contribute.joomla.org',1,15,'Your contributions of time, talent and money make Joomla possible.','',0,3,'','{\"imageurl\":\"images\\/banners\\/white.png\",\"width\":\"\",\"height\":\"\",\"alt\":\"\"}',0,'',-1,0,0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','en-GB');
 /*!40000 ALTER TABLE `plo1j_banners` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -802,7 +802,7 @@ CREATE TABLE `plo1j_extensions` (
   KEY `element_clientid` (`element`,`client_id`),
   KEY `element_folder_clientid` (`element`,`folder`,`client_id`),
   KEY `extension` (`type`,`element`,`folder`,`client_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10066 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10067 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -993,13 +993,13 @@ INSERT INTO `plo1j_extensions` VALUES (10055,'User - Tienda','plugin','tienda','
 INSERT INTO `plo1j_extensions` VALUES (10056,'Tienda - Payment - Authorize.net','plugin','payment_authorizedotnet','tienda',0,0,1,0,'{\"legacy\":true,\"name\":\"Tienda - Payment - Authorize.net\",\"type\":\"plugin\",\"creationDate\":\"October 2011\",\"author\":\"Dioscouri\",\"copyright\":\"2012 Dioscouri.com\",\"authorEmail\":\"info@dioscouri.com\",\"authorUrl\":\"http:\\/\\/www.dioscouri.com\",\"version\":\"0.10.0\",\"description\":\"PLG_TIENDA_PAYMENT_AUTHORIZEDOTNET_PLGDESC\",\"group\":\"\"}','{\"login_id\":\"\",\"tran_key\":\"\",\"md5_hash\":\"\",\"secure_post\":\"0\",\"sandbox\":\"0\",\"sandbox_login_id\":\"\",\"sandbox_tran_key\":\"\",\"sandbox_md5_hash\":\"\",\"failed_order_state\":\"10\",\"payment_received_order_state\":\"17\"}','','',0,'0000-00-00 00:00:00',62,0);
 INSERT INTO `plo1j_extensions` VALUES (10057,'Tienda - Payment - Google Checkout','plugin','payment_googlecheckout','tienda',0,1,1,0,'{\"legacy\":true,\"name\":\"Tienda - Payment - Google Checkout\",\"type\":\"plugin\",\"creationDate\":\"October 2011\",\"author\":\"Dioscouri\",\"copyright\":\"2012 Dioscouri.com\",\"authorEmail\":\"info@dioscouri.com\",\"authorUrl\":\"http:\\/\\/www.dioscouri.com\",\"version\":\"0.10.0\",\"description\":\"PLG_TIENDA_GOOGLECHECKOUT_PLUGINDESCR\",\"group\":\"\"}','{\"merchant_id\":\"769323151762522\",\"merchant_key\":\"uHjL8unB9v7JEjJKCqiWKA\",\"currency\":\"COM_TIENDA_GOOGLECHECKOUT_CURRENCY_DEFAULT\",\"sandbox\":\"1\",\"sandbox_merchant_id\":\"458567985540546\",\"sandbox_merchant_key\":\"jIVvR6a1h9YV227Si0AkOg \",\"articleid\":\"\",\"display_article_title\":\"0\",\"failed_order_state\":\"10\",\"payment_received_order_state\":\"17\",\"geozones\":\"2\"}','','',0,'0000-00-00 00:00:00',63,0);
 INSERT INTO `plo1j_extensions` VALUES (10058,'tienda','component','com_tienda','',1,1,0,0,'{\"legacy\":true,\"name\":\"Tienda\",\"type\":\"component\",\"creationDate\":\"March 12 2012\",\"author\":\"Dioscouri\",\"copyright\":\"2012 Dioscouri.com\",\"authorEmail\":\"info@dioscouri.com\",\"authorUrl\":\"http:\\/\\/www.dioscouri.com\",\"version\":\"0.10.0\",\"description\":\"An e-commerce application for Joomla\",\"group\":\"\"}','{}','','',0,'0000-00-00 00:00:00',64,0);
-INSERT INTO `plo1j_extensions` VALUES (10059,'Dioscouri Library','library','dioscouri','',0,1,1,0,'{\"legacy\":false,\"name\":\"Dioscouri Library\",\"type\":\"library\",\"creationDate\":\"June 2012\",\"author\":\"Dioscouri Design\",\"copyright\":\"Copyright (C) 2012 Dioscouri Design. All rights reserved.\",\"authorEmail\":\"info@dioscouri.com\",\"authorUrl\":\"www.dioscouri.com\",\"version\":\"3.2.0\",\"description\":\"\",\"group\":\"\"}','{}','','',0,'0000-00-00 00:00:00',85,0);
 INSERT INTO `plo1j_extensions` VALUES (10060,'JFirePHP','plugin','jfirephp','system',0,1,1,0,'{\"legacy\":false,\"name\":\"JFirePHP\",\"type\":\"plugin\",\"creationDate\":\"2. 6. 2011\",\"author\":\"Kunena Team & Miha Trtnik\",\"copyright\":\"(c) 2010 Kunena Team & Miha Trtnik, All rights reserved\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.webeks.net\",\"version\":\"1.6.1\",\"description\":\"JFirePHP\\n\\tJoomla 1.6 system plugin to extend JError through FirePHP\\n\\tOutput Joomla Errors, Warnings and Notices to FireBug console when in debug mode.\\n\\tFor more information about FirePHP see: http:\\/\\/www.firephp.org\\/HQ\\/Use.html - FirePHP Headquarters.\",\"group\":\"\"}','{\"enable\":\"1\",\"verbose\":\"0\",\"redirectphp\":\"0\",\"limittodebug\":\"0\",\"maxObjectDepth\":\"10\",\"maxArrayDepth\":\"20\",\"useNativeJsonEncode\":\"1\",\"includeLineNumbers\":\"1\"}','','',0,'0000-00-00 00:00:00',5,0);
 INSERT INTO `plo1j_extensions` VALUES (10061,'Tags - Cloud','module','mod_tags_cloud','',0,1,0,0,'{\"legacy\":true,\"name\":\"Tags - Cloud\",\"type\":\"module\",\"creationDate\":\"December 2010\",\"author\":\"Dioscouri\",\"copyright\":\"2010 Dioscouri.com\",\"authorEmail\":\"info@dioscouri.com\",\"authorUrl\":\"http:\\/\\/www.dioscouri.com\",\"version\":\"0.1.0\",\"description\":\"TAGS_CLOUD_DESC\",\"group\":\"\"}','{\"moduleclass_sfx\":\"\",\"scope_filter\":\"1\",\"scope_id\":\"\",\"max_results\":\"\",\"include_tag_links\":\"1\",\"view_all_tags\":\"0\",\"display_null\":\"1\",\"null_text\":\"No Tags Found\",\"layout\":\"default\"}','','',0,'0000-00-00 00:00:00',4,0);
 INSERT INTO `plo1j_extensions` VALUES (10062,'Tags - Editor Button','plugin','tags','editors-xtd',0,1,1,0,'{\"legacy\":true,\"name\":\"Tags - Editor Button\",\"type\":\"plugin\",\"creationDate\":\"July 2010\",\"author\":\"Dioscouri\",\"copyright\":\"2010 Dioscouri.com\",\"authorEmail\":\"info@dioscouri.com\",\"authorUrl\":\"http:\\/\\/www.dioscouri.com\",\"version\":\"0.1.0\",\"description\":\"PLG_EDITORS-XTD_TAGS\",\"group\":\"\"}','{}','','',0,'0000-00-00 00:00:00',3,0);
 INSERT INTO `plo1j_extensions` VALUES (10063,'Content - Tags','plugin','tags','content',0,1,1,0,'{\"legacy\":true,\"name\":\"Content - Tags\",\"type\":\"plugin\",\"creationDate\":\"July 2010\",\"author\":\"Dioscouri\",\"copyright\":\"2010 Dioscouri.com\",\"authorEmail\":\"info@dioscouri.com\",\"authorUrl\":\"http:\\/\\/www.dioscouri.com\",\"version\":\"0.1.0\",\"description\":\"PLG_CONTENT_TAGS\",\"group\":\"\"}','{}','','',0,'0000-00-00 00:00:00',2,0);
 INSERT INTO `plo1j_extensions` VALUES (10064,'tags','component','com_tags','',1,1,0,0,'{\"legacy\":false,\"name\":\"Tags\",\"type\":\"component\",\"creationDate\":\"April 2012\",\"author\":\"Dioscouri\",\"copyright\":\"2012 Dioscouri.com\",\"authorEmail\":\"info@dioscouri.com\",\"authorUrl\":\"http:\\/\\/www.dioscouri.com\",\"version\":\"2.0\",\"description\":\"A Tags extension for Joomla\",\"group\":\"\"}','{}','','',0,'0000-00-00 00:00:00',1,0);
 INSERT INTO `plo1j_extensions` VALUES (10065,'favorites','component','com_favorites','',1,1,0,0,'{\"legacy\":true,\"name\":\"Favorites\",\"type\":\"component\",\"creationDate\":\"May 2012\",\"author\":\"Dioscouri.com\",\"copyright\":\"2009 Dioscouri.com\",\"authorEmail\":\"info@dioscouri.com\",\"authorUrl\":\"http:\\/\\/www.dioscouri.com\",\"version\":\"0.1.0\",\"description\":\"A User Favorites Manager for Joomla\",\"group\":\"\"}','{}','','',0,'0000-00-00 00:00:00',6,0);
+INSERT INTO `plo1j_extensions` VALUES (10066,'Dioscouri Library','library','dioscouri','',0,1,1,0,'{\"legacy\":false,\"name\":\"Dioscouri Library\",\"type\":\"library\",\"creationDate\":\"June 2012\",\"author\":\"Dioscouri Design\",\"copyright\":\"Copyright (C) 2012 Dioscouri Design. All rights reserved.\",\"authorEmail\":\"info@dioscouri.com\",\"authorUrl\":\"www.dioscouri.com\",\"version\":\"3.5.0\",\"description\":\"\",\"group\":\"\"}','{}','','',0,'0000-00-00 00:00:00',0,0);
 /*!40000 ALTER TABLE `plo1j_extensions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1982,7 +1982,7 @@ CREATE TABLE `plo1j_menu` (
   KEY `idx_alias` (`alias`),
   KEY `idx_path` (`path`(255)),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB AUTO_INCREMENT=481 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=482 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2141,7 +2141,7 @@ INSERT INTO `plo1j_menu` VALUES (476,'main','COM_TAGS','com-tags','','com-tags',
 INSERT INTO `plo1j_menu` VALUES (477,'main','COM_FAVORITES','com-favorites','','com-favorites','index.php?option=com_favorites','component',0,1,1,10065,0,0,'0000-00-00 00:00:00',0,1,'../media/com_favorites/images/favorites_16.png',0,'',293,294,0,'',1);
 INSERT INTO `plo1j_menu` VALUES (478,'top','Shopping Cart','shopping-cart','','shopping-cart','index.php?option=com_tienda&view=carts','component',1,1,1,10058,0,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',295,296,0,'*',0);
 INSERT INTO `plo1j_menu` VALUES (479,'top','Begin Checkout','begin-checkout','','begin-checkout','index.php?option=com_tienda&view=checkout','component',1,1,1,10058,0,0,'0000-00-00 00:00:00',0,1,'',0,'{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":0,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}',297,298,0,'*',0);
-INSERT INTO `plo1j_menu` VALUES (480,'main','COM_TIENDA','com-tienda','','com-tienda','index.php?option=com_tienda','component',0,1,1,10058,0,0,'0000-00-00 00:00:00',0,1,'../media/com_tienda/images/tienda_16.png',0,'',299,300,0,'',1);
+INSERT INTO `plo1j_menu` VALUES (481,'main','COM_TIENDA','com-tienda','','com-tienda','index.php?option=com_tienda','component',0,1,1,10058,0,0,'0000-00-00 00:00:00',0,1,'../media/com_tienda/images/tienda_16.png',0,'',299,300,0,'',1);
 /*!40000 ALTER TABLE `plo1j_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2718,10 +2718,8 @@ CREATE TABLE `plo1j_session` (
 
 LOCK TABLES `plo1j_session` WRITE;
 /*!40000 ALTER TABLE `plo1j_session` DISABLE KEYS */;
-INSERT INTO `plo1j_session` VALUES ('12dd6cbc90c296662a4bddac562f07b5',0,1,'1352086241','__default|a:8:{s:15:\"session.counter\";i:1;s:19:\"session.timer.start\";i:1352086181;s:18:\"session.timer.last\";i:1352086181;s:17:\"session.timer.now\";i:1352086181;s:22:\"session.client.browser\";s:81:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:16.0) Gecko/20100101 Firefox/16.0\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\0*\0data\";O:8:\"stdClass\":0:{}}s:4:\"user\";O:5:\"JUser\":25:{s:9:\"\0*\0isRoot\";b:0;s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:8:\"usertype\";N;s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:6:\"groups\";a:0:{}s:5:\"guest\";i:1;s:13:\"lastResetTime\";N;s:10:\"resetCount\";N;s:10:\"\0*\0_params\";O:9:\"JRegistry\":1:{s:7:\"\0*\0data\";O:8:\"stdClass\":0:{}}s:14:\"\0*\0_authGroups\";a:1:{i:0;i:1;}s:14:\"\0*\0_authLevels\";a:2:{i:0;i:1;i:1;i:1;}s:15:\"\0*\0_authActions\";N;s:12:\"\0*\0_errorMsg\";N;s:10:\"\0*\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:13:\"session.token\";s:32:\"463053efc2bb87020477fed21ba87006\";}',0,'','');
-INSERT INTO `plo1j_session` VALUES ('7bf5dc4b4724fcc80407c659cbcb9f52',0,0,'1352085698','__default|a:9:{s:15:\"session.counter\";i:25;s:19:\"session.timer.start\";i:1352083850;s:18:\"session.timer.last\";i:1352085684;s:17:\"session.timer.now\";i:1352085692;s:22:\"session.client.browser\";s:117:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.94 Safari/537.4\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\0*\0data\";O:8:\"stdClass\":3:{s:5:\"users\";O:8:\"stdClass\":1:{s:5:\"login\";O:8:\"stdClass\":1:{s:4:\"form\";O:8:\"stdClass\":2:{s:4:\"data\";a:0:{}s:6:\"return\";s:44:\"/index.php?option=com_tienda&amp;view=orders\";}}}s:9:\"site::com\";O:8:\"stdClass\":1:{s:10:\"com_tienda\";O:8:\"stdClass\":1:{s:5:\"model\";O:8:\"stdClass\":1:{s:8:\"products\";O:8:\"stdClass\":2:{s:6:\"search\";b:0;s:8:\"category\";s:1:\"2\";}}}}s:6:\"tienda\";O:8:\"stdClass\":2:{s:8:\"order_id\";i:43;s:15:\"orderpayment_id\";i:42;}}}s:4:\"user\";O:5:\"JUser\":25:{s:9:\"\0*\0isRoot\";b:1;s:2:\"id\";s:3:\"406\";s:4:\"name\";s:10:\"Super User\";s:8:\"username\";s:5:\"chris\";s:5:\"email\";s:26:\"chris@ammonitenetworks.com\";s:8:\"password\";s:65:\"5f460b1beebe38e8e17a3148cc9fd421:RV41a5cfIrXBQ8qTt6f3vRGco7Dgdrpn\";s:14:\"password_clear\";s:0:\"\";s:8:\"usertype\";s:10:\"deprecated\";s:5:\"block\";s:1:\"0\";s:9:\"sendEmail\";s:1:\"1\";s:12:\"registerDate\";s:19:\"2012-10-25 16:34:55\";s:13:\"lastvisitDate\";s:19:\"2012-11-04 17:00:55\";s:10:\"activation\";s:1:\"0\";s:6:\"params\";s:0:\"\";s:6:\"groups\";a:1:{i:8;s:1:\"8\";}s:5:\"guest\";i:0;s:13:\"lastResetTime\";s:19:\"0000-00-00 00:00:00\";s:10:\"resetCount\";s:1:\"0\";s:10:\"\0*\0_params\";O:9:\"JRegistry\":1:{s:7:\"\0*\0data\";O:8:\"stdClass\":0:{}}s:14:\"\0*\0_authGroups\";a:2:{i:0;i:1;i:1;i:8;}s:14:\"\0*\0_authLevels\";a:4:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;}s:15:\"\0*\0_authActions\";N;s:12:\"\0*\0_errorMsg\";N;s:10:\"\0*\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:13:\"session.token\";s:32:\"276bdca50f3c7c243eb7039db81e2ba2\";s:13:\"old_sessionid\";s:32:\"7bf5dc4b4724fcc80407c659cbcb9f52\";}',406,'chris','');
-INSERT INTO `plo1j_session` VALUES ('846cc471a9734b54ba9aca0fd2da4f4b',1,0,'1352085619','__default|a:8:{s:15:\"session.counter\";i:248;s:19:\"session.timer.start\";i:1352048450;s:18:\"session.timer.last\";i:1352085598;s:17:\"session.timer.now\";i:1352085612;s:22:\"session.client.browser\";s:117:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.94 Safari/537.4\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\0*\0data\";O:8:\"stdClass\":6:{s:11:\"application\";O:8:\"stdClass\":1:{s:4:\"lang\";s:0:\"\";}s:9:\"com_users\";O:8:\"stdClass\":1:{s:4:\"edit\";O:8:\"stdClass\":1:{s:4:\"user\";O:8:\"stdClass\":2:{s:4:\"data\";N;s:2:\"id\";a:0:{}}}}s:9:\"com_cache\";O:8:\"stdClass\":1:{s:5:\"cache\";O:8:\"stdClass\":4:{s:8:\"ordercol\";s:5:\"group\";s:6:\"filter\";O:8:\"stdClass\":1:{s:9:\"client_id\";i:0;}s:10:\"limitstart\";s:1:\"0\";s:9:\"orderdirn\";s:3:\"asc\";}}s:6:\"global\";O:8:\"stdClass\":1:{s:4:\"list\";O:8:\"stdClass\":1:{s:5:\"limit\";i:0;}}s:13:\"com_installer\";O:8:\"stdClass\":3:{s:7:\"message\";s:0:\"\";s:17:\"extension_message\";s:0:\"\";s:12:\"redirect_url\";N;}s:18:\"administrator::com\";O:8:\"stdClass\":1:{s:10:\"com_tienda\";O:8:\"stdClass\":1:{s:5:\"model\";O:8:\"stdClass\":23:{s:18:\"geozoneslimitstart\";i:0;s:8:\"geozones\";O:8:\"stdClass\":3:{s:12:\"filter_order\";s:14:\"tbl.geozone_id\";s:16:\"filter_direction\";s:3:\"ASC\";s:6:\"filter\";s:0:\"\";}s:22:\"geozonesfilter_id_from\";s:0:\"\";s:20:\"geozonesfilter_id_to\";s:0:\"\";s:19:\"geozonesfilter_name\";s:0:\"\";s:15:\"geozonesid_from\";s:0:\"\";s:13:\"geozonesid_to\";s:0:\"\";s:12:\"geozonesname\";s:0:\"\";s:19:\"geozonesgeozonetype\";s:0:\"\";s:15:\"zoneslimitstart\";i:0;s:5:\"zones\";O:8:\"stdClass\":3:{s:12:\"filter_order\";s:13:\"tbl.zone_name\";s:16:\"filter_direction\";s:3:\"ASC\";s:6:\"filter\";s:0:\"\";}s:15:\"zonesassociated\";s:1:\"0\";s:14:\"zonescountryid\";s:3:\"223\";s:23:\"eavattributeslimitstart\";i:0;s:13:\"eavattributes\";O:8:\"stdClass\":3:{s:12:\"filter_order\";s:12:\"tbl.ordering\";s:16:\"filter_direction\";s:3:\"ASC\";s:6:\"filter\";s:0:\"\";}s:27:\"eavattributesfilter_enabled\";s:0:\"\";s:27:\"eavattributesfilter_id_from\";s:0:\"\";s:25:\"eavattributesfilter_id_to\";s:0:\"\";s:24:\"eavattributesfilter_name\";s:0:\"\";s:20:\"eavattributesid_from\";s:0:\"\";s:18:\"eavattributesid_to\";s:0:\"\";s:17:\"eavattributesname\";s:0:\"\";s:23:\"eavattributesentitytype\";s:0:\"\";}}}}}s:4:\"user\";O:5:\"JUser\":25:{s:9:\"\0*\0isRoot\";b:1;s:2:\"id\";s:3:\"406\";s:4:\"name\";s:10:\"Super User\";s:8:\"username\";s:5:\"chris\";s:5:\"email\";s:26:\"chris@ammonitenetworks.com\";s:8:\"password\";s:65:\"5f460b1beebe38e8e17a3148cc9fd421:RV41a5cfIrXBQ8qTt6f3vRGco7Dgdrpn\";s:14:\"password_clear\";s:0:\"\";s:8:\"usertype\";s:10:\"deprecated\";s:5:\"block\";s:1:\"0\";s:9:\"sendEmail\";s:1:\"1\";s:12:\"registerDate\";s:19:\"2012-10-25 16:34:55\";s:13:\"lastvisitDate\";s:19:\"2012-11-04 02:43:11\";s:10:\"activation\";s:1:\"0\";s:6:\"params\";s:0:\"\";s:6:\"groups\";a:1:{i:8;s:1:\"8\";}s:5:\"guest\";i:0;s:13:\"lastResetTime\";s:19:\"0000-00-00 00:00:00\";s:10:\"resetCount\";s:1:\"0\";s:10:\"\0*\0_params\";O:9:\"JRegistry\":1:{s:7:\"\0*\0data\";O:8:\"stdClass\":0:{}}s:14:\"\0*\0_authGroups\";a:2:{i:0;i:1;i:1;i:8;}s:14:\"\0*\0_authLevels\";a:4:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;}s:15:\"\0*\0_authActions\";N;s:12:\"\0*\0_errorMsg\";N;s:10:\"\0*\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:13:\"session.token\";s:32:\"963ce6140098daa1e4e72af177768e69\";}',406,'chris','');
-INSERT INTO `plo1j_session` VALUES ('d42496679dc3cf40d30f6f6415ef6d0c',1,1,'1352086209','__default|a:8:{s:15:\"session.counter\";i:1;s:19:\"session.timer.start\";i:1352086160;s:18:\"session.timer.last\";i:1352086160;s:17:\"session.timer.now\";i:1352086160;s:22:\"session.client.browser\";s:81:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:16.0) Gecko/20100101 Firefox/16.0\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\0*\0data\";O:8:\"stdClass\":0:{}}s:4:\"user\";O:5:\"JUser\":25:{s:9:\"\0*\0isRoot\";N;s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:8:\"usertype\";N;s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:6:\"groups\";a:0:{}s:5:\"guest\";i:1;s:13:\"lastResetTime\";N;s:10:\"resetCount\";N;s:10:\"\0*\0_params\";O:9:\"JRegistry\":1:{s:7:\"\0*\0data\";O:8:\"stdClass\":0:{}}s:14:\"\0*\0_authGroups\";N;s:14:\"\0*\0_authLevels\";a:2:{i:0;i:1;i:1;i:1;}s:15:\"\0*\0_authActions\";N;s:12:\"\0*\0_errorMsg\";N;s:10:\"\0*\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:13:\"session.token\";s:32:\"29982f768abff5eb6e5c99f996fdb1e2\";}',0,'','');
+INSERT INTO `plo1j_session` VALUES ('j2e9qnh3999nskfu5f9hentl27',1,0,'1355528701','__default|a:8:{s:15:\"session.counter\";i:9;s:19:\"session.timer.start\";i:1355528651;s:18:\"session.timer.last\";i:1355528700;s:17:\"session.timer.now\";i:1355528700;s:22:\"session.client.browser\";s:81:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:17.0) Gecko/20100101 Firefox/17.0\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\0*\0data\";O:8:\"stdClass\":2:{s:11:\"application\";O:8:\"stdClass\":1:{s:4:\"lang\";s:0:\"\";}s:13:\"com_installer\";O:8:\"stdClass\":2:{s:7:\"message\";s:0:\"\";s:17:\"extension_message\";s:0:\"\";}}}s:4:\"user\";O:5:\"JUser\":25:{s:9:\"\0*\0isRoot\";b:1;s:2:\"id\";s:3:\"406\";s:4:\"name\";s:10:\"Super User\";s:8:\"username\";s:5:\"chris\";s:5:\"email\";s:26:\"chris@ammonitenetworks.com\";s:8:\"password\";s:65:\"5f460b1beebe38e8e17a3148cc9fd421:RV41a5cfIrXBQ8qTt6f3vRGco7Dgdrpn\";s:14:\"password_clear\";s:0:\"\";s:8:\"usertype\";s:10:\"deprecated\";s:5:\"block\";s:1:\"0\";s:9:\"sendEmail\";s:1:\"1\";s:12:\"registerDate\";s:19:\"2012-10-25 16:34:55\";s:13:\"lastvisitDate\";s:19:\"2012-11-20 08:02:21\";s:10:\"activation\";s:1:\"0\";s:6:\"params\";s:0:\"\";s:6:\"groups\";a:1:{i:8;s:1:\"8\";}s:5:\"guest\";i:0;s:13:\"lastResetTime\";s:19:\"0000-00-00 00:00:00\";s:10:\"resetCount\";s:1:\"0\";s:10:\"\0*\0_params\";O:9:\"JRegistry\":1:{s:7:\"\0*\0data\";O:8:\"stdClass\":0:{}}s:14:\"\0*\0_authGroups\";a:2:{i:0;i:1;i:1;i:8;}s:14:\"\0*\0_authLevels\";a:4:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;}s:15:\"\0*\0_authActions\";N;s:12:\"\0*\0_errorMsg\";N;s:10:\"\0*\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:13:\"session.token\";s:32:\"3de5cd3c7371813a912283f25f4c160e\";}',406,'chris','');
+INSERT INTO `plo1j_session` VALUES ('k9meqjevbb66st6ufl2h4pphn7',0,1,'1355528644','__default|a:8:{s:15:\"session.counter\";i:2;s:19:\"session.timer.start\";i:1355528602;s:18:\"session.timer.last\";i:1355528602;s:17:\"session.timer.now\";i:1355528643;s:22:\"session.client.browser\";s:81:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:17.0) Gecko/20100101 Firefox/17.0\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\0*\0data\";O:8:\"stdClass\":0:{}}s:4:\"user\";O:5:\"JUser\":25:{s:9:\"\0*\0isRoot\";b:0;s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:8:\"usertype\";N;s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:6:\"groups\";a:0:{}s:5:\"guest\";i:1;s:13:\"lastResetTime\";N;s:10:\"resetCount\";N;s:10:\"\0*\0_params\";O:9:\"JRegistry\":1:{s:7:\"\0*\0data\";O:8:\"stdClass\":0:{}}s:14:\"\0*\0_authGroups\";a:1:{i:0;i:1;}s:14:\"\0*\0_authLevels\";a:2:{i:0;i:1;i:1;i:1;}s:15:\"\0*\0_authActions\";N;s:12:\"\0*\0_errorMsg\";N;s:10:\"\0*\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:13:\"session.token\";s:32:\"c815f9d91016353fd61c720d1063bf1e\";}',0,'','');
 /*!40000 ALTER TABLE `plo1j_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2909,7 +2907,7 @@ CREATE TABLE `plo1j_tienda_addresses` (
   KEY `fk_zones_addresses` (`zone_id`),
   CONSTRAINT `fk_addresses_countries` FOREIGN KEY (`country_id`) REFERENCES `plo1j_tienda_countries` (`country_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_zones_addresses` FOREIGN KEY (`zone_id`) REFERENCES `plo1j_tienda_zones` (`zone_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2918,11 +2916,12 @@ CREATE TABLE `plo1j_tienda_addresses` (
 
 LOCK TABLES `plo1j_tienda_addresses` WRITE;
 /*!40000 ALTER TABLE `plo1j_tienda_addresses` DISABLE KEYS */;
-INSERT INTO `plo1j_tienda_addresses` VALUES (1,406,1,'Home','Ammonite Networks','Dr','Christopher','French','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','84094',223,3670,'',NULL,NULL,0);
+INSERT INTO `plo1j_tienda_addresses` VALUES (1,406,1,'Home','Ammonite Networks','Dr','Christopher','French','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','84094',223,3670,'',1,NULL,0);
 INSERT INTO `plo1j_tienda_addresses` VALUES (2,411,1,'Home','Normal','DR','Chris','French','Richard','',NULL,NULL,'1658 ERICKSON PARK DR','','WEST JORDAN','84084',223,3613,'',NULL,NULL,0);
 INSERT INTO `plo1j_tienda_addresses` VALUES (3,411,2,'Home','Normal','DR','Chris','French','Richard','',NULL,NULL,'1658 ERICKSON PARK DR','','WEST JORDAN','84084',223,3613,'',NULL,NULL,0);
 INSERT INTO `plo1j_tienda_addresses` VALUES (4,-11,1,'Chris','French','DR','Christopher','French','','chris',NULL,NULL,'1658 ERICKSON PARK DR','','sandy','84084',223,3670,'',NULL,NULL,0);
 INSERT INTO `plo1j_tienda_addresses` VALUES (5,412,1,'Work','French','DR','Christopher','French','','chris',NULL,NULL,'1658 ERICKSON PARK DR','','Sandy','84084',223,3670,'',NULL,NULL,0);
+INSERT INTO `plo1j_tienda_addresses` VALUES (6,413,1,'Work Again','Ammonite Networks','DR','Awesome','Sauce','','chris',NULL,NULL,'1658 ERICKSON PARK DR','','WEST JORDAN','84084',223,3670,'1231445',NULL,NULL,0);
 /*!40000 ALTER TABLE `plo1j_tienda_addresses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2947,7 +2946,7 @@ CREATE TABLE `plo1j_tienda_carts` (
   KEY `idx_user_product` (`user_id`,`product_id`),
   KEY `fk_carts_products` (`product_id`),
   CONSTRAINT `fk_carts_products` FOREIGN KEY (`product_id`) REFERENCES `plo1j_tienda_products` (`product_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2958,7 +2957,7 @@ LOCK TABLES `plo1j_tienda_carts` WRITE;
 /*!40000 ALTER TABLE `plo1j_tienda_carts` DISABLE KEYS */;
 INSERT INTO `plo1j_tienda_carts` VALUES (31,411,'01d9deb58c279520208c959b18f7d27a',6,0,'13',2,'2012-11-05 05:47:41',NULL);
 INSERT INTO `plo1j_tienda_carts` VALUES (60,412,'d39cfdfccfcfe83ab77d1ffd2d99666f',4,0,'2,4',1,'2012-11-05 10:31:28',NULL);
-INSERT INTO `plo1j_tienda_carts` VALUES (63,406,'7bf5dc4b4724fcc80407c659cbcb9f52',1,0,'',1,'2012-11-05 11:20:20',NULL);
+INSERT INTO `plo1j_tienda_carts` VALUES (71,406,'j2e9qnh3999nskfu5f9hentl27',1,0,'',1,'2012-11-05 04:33:34',NULL);
 /*!40000 ALTER TABLE `plo1j_tienda_carts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3032,7 +3031,7 @@ CREATE TABLE `plo1j_tienda_config` (
   `config_name` varchar(255) NOT NULL,
   `value` text NOT NULL,
   PRIMARY KEY (`config_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=398 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=401 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3041,8 +3040,8 @@ CREATE TABLE `plo1j_tienda_config` (
 
 LOCK TABLES `plo1j_tienda_config` WRITE;
 /*!40000 ALTER TABLE `plo1j_tienda_config` DISABLE KEYS */;
-INSERT INTO `plo1j_tienda_config` VALUES (1,'last_deleted_expired_sessioncarts','2012-11-05 03:29:48');
-INSERT INTO `plo1j_tienda_config` VALUES (2,'last_deleted_expired_sessionproductscompared','2012-11-05 03:29:48');
+INSERT INTO `plo1j_tienda_config` VALUES (1,'last_deleted_expired_sessioncarts','2012-12-14 23:45:00');
+INSERT INTO `plo1j_tienda_config` VALUES (2,'last_deleted_expired_sessionproductscompared','2012-12-14 23:45:00');
 INSERT INTO `plo1j_tienda_config` VALUES (3,'checkProductFiles','1');
 INSERT INTO `plo1j_tienda_config` VALUES (4,'checkOrdersOrderCurrency','1');
 INSERT INTO `plo1j_tienda_config` VALUES (5,'checkProductsInventory','1');
@@ -3438,6 +3437,9 @@ INSERT INTO `plo1j_tienda_config` VALUES (394,'secret_word','*hvq| u,YPQ!&,<Z@6s
 INSERT INTO `plo1j_tienda_config` VALUES (395,'secret_word',':Gt8ET&Ix6q0mFSx!urB.&9L&ivPc7X:');
 INSERT INTO `plo1j_tienda_config` VALUES (396,'checkSecretWord','1');
 INSERT INTO `plo1j_tienda_config` VALUES (397,'default_tax_geozone','2');
+INSERT INTO `plo1j_tienda_config` VALUES (398,'checkEAVAttributesFormatStrftime','1');
+INSERT INTO `plo1j_tienda_config` VALUES (399,'checkEAVAttributesFormatDate','1');
+INSERT INTO `plo1j_tienda_config` VALUES (400,'checkOrderHistoryID','1');
 /*!40000 ALTER TABLE `plo1j_tienda_config` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3747,7 +3749,7 @@ CREATE TABLE `plo1j_tienda_coupons` (
 
 LOCK TABLES `plo1j_tienda_coupons` WRITE;
 /*!40000 ALTER TABLE `plo1j_tienda_coupons` DISABLE KEYS */;
-INSERT INTO `plo1j_tienda_coupons` VALUES (1,' Chris Discount','FORCHRIS',1,'price',0,25.00000,1,1,'If you are named chris you get a discount','','2012-11-04 00:44:23','2012-11-04 02:19:33','2012-11-01 17:43:50','2012-11-08 17:43:53',1,28,-1,-1);
+INSERT INTO `plo1j_tienda_coupons` VALUES (1,' Chris Discount','FORCHRIS',1,'price',0,25.00000,1,1,'If you are named chris you get a discount','','2012-11-04 00:44:23','2012-11-05 04:00:08','2012-11-01 17:43:50','2012-11-08 17:43:53',1,32,-1,-1);
 INSERT INTO `plo1j_tienda_coupons` VALUES (2,'ALLORDER','ALLORDER',0,'price',0,100.00000,0,1,'Discount to all','','2012-11-04 02:02:59','2012-11-05 00:27:32','2012-11-01 19:02:00','2012-11-30 19:02:39',1,4,-1,-1);
 /*!40000 ALTER TABLE `plo1j_tienda_coupons` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -3949,6 +3951,8 @@ CREATE TABLE `plo1j_tienda_eavattributes` (
   `eavattribute_required` tinyint(1) NOT NULL,
   `eavattribute_label` varchar(255) NOT NULL,
   `eavattribute_alias` varchar(255) NOT NULL,
+  `eavattribute_format_strftime` varchar(255) DEFAULT NULL,
+  `eavattribute_format_date` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`eavattribute_id`),
   KEY `eaventity_id` (`eaventity_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
@@ -3960,10 +3964,10 @@ CREATE TABLE `plo1j_tienda_eavattributes` (
 
 LOCK TABLES `plo1j_tienda_eavattributes` WRITE;
 /*!40000 ALTER TABLE `plo1j_tienda_eavattributes` DISABLE KEYS */;
-INSERT INTO `plo1j_tienda_eavattributes` VALUES (1,'products',0,'text','',0,4,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,1,1,'textarea','textarea');
-INSERT INTO `plo1j_tienda_eavattributes` VALUES (2,'products',0,'int','',0,3,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,2,1,'INT Type','int-type');
-INSERT INTO `plo1j_tienda_eavattributes` VALUES (3,'products',0,'varchar','',0,2,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,2,1,'STRING TYPE','string-type');
-INSERT INTO `plo1j_tienda_eavattributes` VALUES (4,'products',0,'text','',0,1,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,2,1,'TEXTAREA','textarea');
+INSERT INTO `plo1j_tienda_eavattributes` VALUES (1,'products',0,'text','',0,4,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,1,1,'textarea','textarea',NULL,NULL);
+INSERT INTO `plo1j_tienda_eavattributes` VALUES (2,'products',0,'int','',0,3,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,2,1,'INT Type','int-type',NULL,NULL);
+INSERT INTO `plo1j_tienda_eavattributes` VALUES (3,'products',0,'varchar','',0,2,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,2,1,'STRING TYPE','string-type',NULL,NULL);
+INSERT INTO `plo1j_tienda_eavattributes` VALUES (4,'products',0,'text','',0,1,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,2,1,'TEXTAREA','textarea',NULL,NULL);
 /*!40000 ALTER TABLE `plo1j_tienda_eavattributes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4045,7 +4049,7 @@ CREATE TABLE `plo1j_tienda_eavvaluesint` (
   PRIMARY KEY (`eavvalue_id`),
   KEY `eavattribute_id` (`eavattribute_id`,`eaventity_id`),
   CONSTRAINT `fk_eavvaluesint_eavattribute` FOREIGN KEY (`eavattribute_id`) REFERENCES `plo1j_tienda_eavattributes` (`eavattribute_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4063,6 +4067,9 @@ INSERT INTO `plo1j_tienda_eavvaluesint` VALUES (6,2,'orderitems',56,123,'0000-00
 INSERT INTO `plo1j_tienda_eavvaluesint` VALUES (7,2,'orderitems',57,0,'0000-00-00 00:00:00','0000-00-00 00:00:00');
 INSERT INTO `plo1j_tienda_eavvaluesint` VALUES (9,2,'orderitems',62,0,'0000-00-00 00:00:00','0000-00-00 00:00:00');
 INSERT INTO `plo1j_tienda_eavvaluesint` VALUES (10,2,'orderitems',63,0,'0000-00-00 00:00:00','0000-00-00 00:00:00');
+INSERT INTO `plo1j_tienda_eavvaluesint` VALUES (11,2,'carts',69,1235,'0000-00-00 00:00:00','0000-00-00 00:00:00');
+INSERT INTO `plo1j_tienda_eavvaluesint` VALUES (12,2,'carts',70,1235,'0000-00-00 00:00:00','0000-00-00 00:00:00');
+INSERT INTO `plo1j_tienda_eavvaluesint` VALUES (13,2,'orderitems',75,1235,'0000-00-00 00:00:00','0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `plo1j_tienda_eavvaluesint` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4084,7 +4091,7 @@ CREATE TABLE `plo1j_tienda_eavvaluestext` (
   PRIMARY KEY (`eavvalue_id`),
   KEY `eavattribute_id` (`eavattribute_id`,`eaventity_id`),
   CONSTRAINT `fk_eavvaluestext_eavattribute` FOREIGN KEY (`eavattribute_id`) REFERENCES `plo1j_tienda_eavattributes` (`eavattribute_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4103,7 +4110,40 @@ INSERT INTO `plo1j_tienda_eavvaluestext` VALUES (7,4,'orderitems',56,'Become An 
 INSERT INTO `plo1j_tienda_eavvaluestext` VALUES (8,4,'orderitems',57,'','0000-00-00 00:00:00','0000-00-00 00:00:00');
 INSERT INTO `plo1j_tienda_eavvaluestext` VALUES (10,4,'orderitems',62,'','0000-00-00 00:00:00','0000-00-00 00:00:00');
 INSERT INTO `plo1j_tienda_eavvaluestext` VALUES (11,4,'orderitems',63,'','0000-00-00 00:00:00','0000-00-00 00:00:00');
+INSERT INTO `plo1j_tienda_eavvaluestext` VALUES (12,4,'carts',69,'asdfasdfasdf','0000-00-00 00:00:00','0000-00-00 00:00:00');
+INSERT INTO `plo1j_tienda_eavvaluestext` VALUES (13,4,'carts',70,'asdfasdfasdf','0000-00-00 00:00:00','0000-00-00 00:00:00');
+INSERT INTO `plo1j_tienda_eavvaluestext` VALUES (14,4,'orderitems',75,'asdfasdfasdf','0000-00-00 00:00:00','0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `plo1j_tienda_eavvaluestext` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `plo1j_tienda_eavvaluestime`
+--
+
+DROP TABLE IF EXISTS `plo1j_tienda_eavvaluestime`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `plo1j_tienda_eavvaluestime` (
+  `eavvalue_id` int(11) NOT NULL AUTO_INCREMENT,
+  `eavattribute_id` int(11) NOT NULL,
+  `eaventity_type` varchar(255) NOT NULL COMMENT 'table name of the entity',
+  `eaventity_id` int(11) NOT NULL,
+  `eavvalue_value` time NOT NULL,
+  `created_date` datetime NOT NULL,
+  `modified_date` datetime NOT NULL,
+  PRIMARY KEY (`eavvalue_id`),
+  KEY `eavattribute_id` (`eavattribute_id`,`eaventity_id`),
+  CONSTRAINT `fk_eavvaluestime_eavattribute` FOREIGN KEY (`eavattribute_id`) REFERENCES `plo1j_tienda_eavattributes` (`eavattribute_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `plo1j_tienda_eavvaluestime`
+--
+
+LOCK TABLES `plo1j_tienda_eavvaluestime` WRITE;
+/*!40000 ALTER TABLE `plo1j_tienda_eavvaluestime` DISABLE KEYS */;
+/*!40000 ALTER TABLE `plo1j_tienda_eavvaluestime` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -4124,7 +4164,7 @@ CREATE TABLE `plo1j_tienda_eavvaluesvarchar` (
   PRIMARY KEY (`eavvalue_id`),
   KEY `eavattribute_id` (`eavattribute_id`,`eaventity_id`),
   CONSTRAINT `fk_eavvaluesvarchar_eavattribute` FOREIGN KEY (`eavattribute_id`) REFERENCES `plo1j_tienda_eavattributes` (`eavattribute_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4142,6 +4182,9 @@ INSERT INTO `plo1j_tienda_eavvaluesvarchar` VALUES (6,3,'orderitems',56,'String 
 INSERT INTO `plo1j_tienda_eavvaluesvarchar` VALUES (7,3,'orderitems',57,'','0000-00-00 00:00:00','0000-00-00 00:00:00');
 INSERT INTO `plo1j_tienda_eavvaluesvarchar` VALUES (9,3,'orderitems',62,'','0000-00-00 00:00:00','0000-00-00 00:00:00');
 INSERT INTO `plo1j_tienda_eavvaluesvarchar` VALUES (10,3,'orderitems',63,'','0000-00-00 00:00:00','0000-00-00 00:00:00');
+INSERT INTO `plo1j_tienda_eavvaluesvarchar` VALUES (11,3,'carts',69,'testing admin','0000-00-00 00:00:00','0000-00-00 00:00:00');
+INSERT INTO `plo1j_tienda_eavvaluesvarchar` VALUES (12,3,'carts',70,'testing admin','0000-00-00 00:00:00','0000-00-00 00:00:00');
+INSERT INTO `plo1j_tienda_eavvaluesvarchar` VALUES (13,3,'orderitems',75,'testing admin','0000-00-00 00:00:00','0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `plo1j_tienda_eavvaluesvarchar` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4218,7 +4261,7 @@ CREATE TABLE `plo1j_tienda_groups` (
   `created_date` datetime NOT NULL,
   `modified_date` datetime NOT NULL,
   PRIMARY KEY (`group_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4227,7 +4270,8 @@ CREATE TABLE `plo1j_tienda_groups` (
 
 LOCK TABLES `plo1j_tienda_groups` WRITE;
 /*!40000 ALTER TABLE `plo1j_tienda_groups` DISABLE KEYS */;
-INSERT INTO `plo1j_tienda_groups` VALUES (1,'Default','<p>Default</p>',0,'2010-09-19 10:27:00','2010-09-19 10:27:03');
+INSERT INTO `plo1j_tienda_groups` VALUES (1,'Default','<p>Default</p>',2,'2010-09-19 10:27:00','2012-11-05 04:20:36');
+INSERT INTO `plo1j_tienda_groups` VALUES (2,'New Users','<p>asdfasdfasdfasd</p>',1,'2012-11-05 04:21:34','2012-11-05 04:21:34');
 /*!40000 ALTER TABLE `plo1j_tienda_groups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4289,7 +4333,7 @@ CREATE TABLE `plo1j_tienda_ordercoupons` (
   `ordercoupon_value_type` tinyint(1) NOT NULL COMMENT '0=Flat-rate, 1=Percentage',
   `ordercoupon_amount` decimal(12,5) NOT NULL COMMENT 'The total discount amount of this coupon',
   PRIMARY KEY (`ordercoupon_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4330,6 +4374,10 @@ INSERT INTO `plo1j_tienda_ordercoupons` VALUES (29,1,23,' Chris Discount','FORCH
 INSERT INTO `plo1j_tienda_ordercoupons` VALUES (30,1,23,' Chris Discount','FORCHRIS',0,'',0,25.00000,1,15.25000);
 INSERT INTO `plo1j_tienda_ordercoupons` VALUES (31,2,34,'ALLORDER','ALLORDER',0,'',0,100.00000,0,100.00000);
 INSERT INTO `plo1j_tienda_ordercoupons` VALUES (32,2,35,'ALLORDER','ALLORDER',0,'',0,100.00000,0,100.00000);
+INSERT INTO `plo1j_tienda_ordercoupons` VALUES (33,1,44,' Chris Discount','FORCHRIS',0,'',0,25.00000,1,14.75000);
+INSERT INTO `plo1j_tienda_ordercoupons` VALUES (34,1,45,' Chris Discount','FORCHRIS',0,'',0,25.00000,1,14.75000);
+INSERT INTO `plo1j_tienda_ordercoupons` VALUES (35,1,46,' Chris Discount','FORCHRIS',0,'',0,25.00000,1,13.50000);
+INSERT INTO `plo1j_tienda_ordercoupons` VALUES (36,1,47,' Chris Discount','FORCHRIS',0,'',0,25.00000,1,13.50000);
 /*!40000 ALTER TABLE `plo1j_tienda_ordercoupons` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4341,18 +4389,18 @@ DROP TABLE IF EXISTS `plo1j_tienda_orderhistory`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `plo1j_tienda_orderhistory` (
-  `order_history_id` int(11) NOT NULL AUTO_INCREMENT,
+  `orderhistory_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL DEFAULT '0',
   `order_state_id` int(11) NOT NULL,
   `date_added` datetime NOT NULL,
   `notify_customer` int(1) DEFAULT '0',
   `comments` text,
-  PRIMARY KEY (`order_history_id`),
+  PRIMARY KEY (`orderhistory_id`),
   KEY `fk_OrderState_OrderHistory` (`order_state_id`),
   KEY `fk_Orders_OrderHistory` (`order_id`),
   CONSTRAINT `fk_OrderState_OrderHistory` FOREIGN KEY (`order_state_id`) REFERENCES `plo1j_tienda_orderstates` (`order_state_id`) ON DELETE NO ACTION ON UPDATE CASCADE,
   CONSTRAINT `fk_Orders_OrderHistory` FOREIGN KEY (`order_id`) REFERENCES `plo1j_tienda_orders` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4421,6 +4469,20 @@ INSERT INTO `plo1j_tienda_orderhistory` VALUES (63,40,15,'2012-11-05 02:45:28',0
 INSERT INTO `plo1j_tienda_orderhistory` VALUES (64,41,15,'2012-11-05 02:46:07',0,'');
 INSERT INTO `plo1j_tienda_orderhistory` VALUES (65,42,15,'2012-11-05 02:54:08',0,'');
 INSERT INTO `plo1j_tienda_orderhistory` VALUES (66,43,15,'2012-11-05 03:21:32',0,'');
+INSERT INTO `plo1j_tienda_orderhistory` VALUES (67,44,15,'2012-11-05 03:48:04',0,'');
+INSERT INTO `plo1j_tienda_orderhistory` VALUES (68,45,15,'2012-11-05 03:49:17',0,'');
+INSERT INTO `plo1j_tienda_orderhistory` VALUES (69,46,15,'2012-11-05 03:51:19',0,'');
+INSERT INTO `plo1j_tienda_orderhistory` VALUES (70,46,17,'2012-11-05 03:52:47',0,'Payment Received');
+INSERT INTO `plo1j_tienda_orderhistory` VALUES (71,8,5,'2012-11-05 03:57:05',1,NULL);
+INSERT INTO `plo1j_tienda_orderhistory` VALUES (72,47,15,'2012-11-05 04:00:08',0,'');
+INSERT INTO `plo1j_tienda_orderhistory` VALUES (73,47,17,'2012-11-05 04:01:13',0,'Payment Received');
+INSERT INTO `plo1j_tienda_orderhistory` VALUES (74,47,5,'2012-11-05 04:02:30',1,NULL);
+INSERT INTO `plo1j_tienda_orderhistory` VALUES (75,48,15,'2012-11-05 04:15:38',0,'');
+INSERT INTO `plo1j_tienda_orderhistory` VALUES (76,48,17,'2012-11-05 04:16:50',0,'Payment Received');
+INSERT INTO `plo1j_tienda_orderhistory` VALUES (77,48,5,'2012-11-05 04:18:06',0,NULL);
+INSERT INTO `plo1j_tienda_orderhistory` VALUES (78,49,15,'2012-11-05 04:38:48',0,'');
+INSERT INTO `plo1j_tienda_orderhistory` VALUES (79,50,15,'2012-11-05 04:40:03',0,'');
+INSERT INTO `plo1j_tienda_orderhistory` VALUES (80,51,15,'2012-11-05 04:45:03',0,'');
 /*!40000 ALTER TABLE `plo1j_tienda_orderhistory` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4509,7 +4571,7 @@ CREATE TABLE `plo1j_tienda_orderinfo` (
   KEY `idx_orderinfo_order_id` (`order_id`),
   KEY `fk_Orders_OrderInfo` (`order_id`),
   CONSTRAINT `fk_Orders_OrderInfo` FOREIGN KEY (`order_id`) REFERENCES `plo1j_tienda_orders` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4559,6 +4621,14 @@ INSERT INTO `plo1j_tienda_orderinfo` VALUES (39,40,'French','French','Christophe
 INSERT INTO `plo1j_tienda_orderinfo` VALUES (40,41,'French','French','Christopher','','chris',NULL,NULL,'1658 ERICKSON PARK DR','','Sandy','Utah','United States',3670,223,'84084','','French','French','Christopher','','chris',NULL,NULL,'1658 ERICKSON PARK DR','','Sandy','Utah','United States',3670,223,'84084','','fakeuser@fakesuser.com',412);
 INSERT INTO `plo1j_tienda_orderinfo` VALUES (41,42,'Ammonite Networks','French','Christopher','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','Utah','United States',3670,223,'84094','','Ammonite Networks','French','Christopher','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','Utah','United States',3670,223,'84094','','chris@ammonitenetworks.com',406);
 INSERT INTO `plo1j_tienda_orderinfo` VALUES (42,43,'Ammonite Networks','French','Christopher','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','Utah','United States',3670,223,'84094','',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'',NULL,'','','',0,0,'',NULL,'chris@ammonitenetworks.com',406);
+INSERT INTO `plo1j_tienda_orderinfo` VALUES (43,44,'Ammonite Networks','French','Christopher','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','Utah','United States',3670,223,'84094','','Ammonite Networks','French','Christopher','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','Utah','United States',3670,223,'84094','','chris@ammonitenetworks.com',406);
+INSERT INTO `plo1j_tienda_orderinfo` VALUES (44,45,'Ammonite Networks','French','Christopher','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','Utah','United States',3670,223,'84094','','Ammonite Networks','French','Christopher','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','Utah','United States',3670,223,'84094','','chris@ammonitenetworks.com',406);
+INSERT INTO `plo1j_tienda_orderinfo` VALUES (45,46,'Ammonite Networks','French','Christopher','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','Utah','United States',3670,223,'84094','','Ammonite Networks','French','Christopher','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','Utah','United States',3670,223,'84094','','chris@ammonitenetworks.com',406);
+INSERT INTO `plo1j_tienda_orderinfo` VALUES (46,47,'Ammonite Networks','French','Christopher','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','Utah','United States',3670,223,'84094','','Ammonite Networks','French','Christopher','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','Utah','United States',3670,223,'84094','','chris@ammonitenetworks.com',406);
+INSERT INTO `plo1j_tienda_orderinfo` VALUES (47,48,'Ammonite Networks','Sauce','Awesome','','chris',NULL,NULL,'1658 ERICKSON PARK DR','','WEST JORDAN','Utah','United States',3670,223,'84084','1231445',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'',NULL,'','','',0,0,'',NULL,'newuser@emailaddress.com',413);
+INSERT INTO `plo1j_tienda_orderinfo` VALUES (48,49,'Ammonite Networks','French','Christopher','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','Utah','United States',3670,223,'84094',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'',NULL,'','','',0,0,'',NULL,'chris@ammonitenetworks.com',0);
+INSERT INTO `plo1j_tienda_orderinfo` VALUES (49,50,'Ammonite Networks','French','Christopher','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','Utah','United States',3670,223,'84094',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'',NULL,'','','',0,0,'',NULL,'chris@ammonitenetworks.com',0);
+INSERT INTO `plo1j_tienda_orderinfo` VALUES (50,51,'Ammonite Networks','French','Christopher','Richard','8017068019',NULL,NULL,'921 East 10600 South','','Sandy','Utah','United States',3670,223,'84094',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'',NULL,'','','',0,0,'',NULL,'chris@ammonitenetworks.com',0);
 /*!40000 ALTER TABLE `plo1j_tienda_orderinfo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4581,7 +4651,7 @@ CREATE TABLE `plo1j_tienda_orderitemattributes` (
   `orderitemattribute_weight` varchar(1) NOT NULL DEFAULT '+',
   PRIMARY KEY (`orderitemattribute_id`),
   KEY `productattribute_id` (`productattributeoption_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=114 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4700,6 +4770,15 @@ INSERT INTO `plo1j_tienda_orderitemattributes` VALUES (110,66,2,'Green',2.00000,
 INSERT INTO `plo1j_tienda_orderitemattributes` VALUES (111,66,4,'Plain',0.00000,'PLAIN','+',0.00000,'0');
 INSERT INTO `plo1j_tienda_orderitemattributes` VALUES (112,67,1,'Red',5.00000,'REDBAG','+',0.00000,'0');
 INSERT INTO `plo1j_tienda_orderitemattributes` VALUES (113,67,4,'Plain',0.00000,'PLAIN','+',0.00000,'0');
+INSERT INTO `plo1j_tienda_orderitemattributes` VALUES (114,70,2,'Green',2.00000,'GREENBAG','-',0.00000,'1');
+INSERT INTO `plo1j_tienda_orderitemattributes` VALUES (115,70,6,'Everything',5.00000,'EVERYTHING','+',0.00000,'1');
+INSERT INTO `plo1j_tienda_orderitemattributes` VALUES (116,72,2,'Green',2.00000,'GREENBAG','-',0.00000,'1');
+INSERT INTO `plo1j_tienda_orderitemattributes` VALUES (117,72,6,'Everything',5.00000,'EVERYTHING','+',0.00000,'1');
+INSERT INTO `plo1j_tienda_orderitemattributes` VALUES (118,73,2,'Green',2.00000,'GREENBAG','-',0.00000,'1');
+INSERT INTO `plo1j_tienda_orderitemattributes` VALUES (119,73,4,'Plain',0.00000,'PLAIN','+',0.00000,'0');
+INSERT INTO `plo1j_tienda_orderitemattributes` VALUES (120,74,2,'Green',2.00000,'GREENBAG','-',0.00000,'1');
+INSERT INTO `plo1j_tienda_orderitemattributes` VALUES (121,74,4,'Plain',0.00000,'PLAIN','+',0.00000,'0');
+INSERT INTO `plo1j_tienda_orderitemattributes` VALUES (122,75,13,'BIg',1.00000,'BIGGER','+',0.00000,'1');
 /*!40000 ALTER TABLE `plo1j_tienda_orderitemattributes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4753,7 +4832,7 @@ CREATE TABLE `plo1j_tienda_orderitems` (
   KEY `fk_Product_OrderItem` (`product_id`),
   CONSTRAINT `fk_Order_OrderItem` FOREIGN KEY (`order_id`) REFERENCES `plo1j_tienda_orders` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_Product_OrderItem` FOREIGN KEY (`product_id`) REFERENCES `plo1j_tienda_products` (`product_id`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4828,6 +4907,16 @@ INSERT INTO `plo1j_tienda_orderitems` VALUES (65,40,NULL,4,'2,4','Bag Color: Gre
 INSERT INTO `plo1j_tienda_orderitems` VALUES (66,41,NULL,4,'2,4','Bag Color: Green, Type Of Bagel: Plain','12334456GREENBAGPLAIN','Chris\' Awesome Coffee',1,56.00000,'-2.00000',0.00000,54.00000,5.40000,0.00000,0.00000,NULL,1.00000,'2','2012-11-05 02:46:07',0,0.00000,0,0,'',0,0,'',0.00000,0,0,0,0,'',NULL);
 INSERT INTO `plo1j_tienda_orderitems` VALUES (67,42,NULL,4,'1,4','Bag Color: Red, Type Of Bagel: Plain','12334456REDBAGPLAIN','Chris\' Awesome Coffee',1,56.00000,'+5.00000',0.00000,61.00000,6.10000,0.00000,0.00000,NULL,0.00000,'1','2012-11-05 02:54:08',0,0.00000,0,0,'',0,0,'',0.00000,0,0,0,0,'',NULL);
 INSERT INTO `plo1j_tienda_orderitems` VALUES (68,43,NULL,1,'','','','Ferrari One 200',1,8.74000,'0.00000',0.00000,8.74000,0.87400,0.00000,0.00000,NULL,0.00000,'0.0000','2012-11-05 03:21:32',0,0.00000,0,0,'',0,0,'',0.00000,0,0,0,0,'',NULL);
+INSERT INTO `plo1j_tienda_orderitems` VALUES (69,44,NULL,1,'','','','Ferrari One 200',1,8.74000,'0.00000',0.00000,8.74000,0.87400,0.00000,0.00000,NULL,0.00000,'0.0000','2012-11-05 03:48:04',0,0.00000,0,0,'',0,0,'',0.00000,0,0,0,0,'',NULL);
+INSERT INTO `plo1j_tienda_orderitems` VALUES (70,44,NULL,4,'2,6','Bag Color: Green, Type Of Bagel: Everything','12334456GREENBAGEVERYTHING','Chris\' Awesome Coffee',1,56.00000,'+3.00000',0.00000,44.25000,4.42500,0.00000,0.00000,NULL,2.00000,'3','2012-11-05 03:48:04',0,0.00000,0,0,'',0,0,'',0.00000,0,0,0,0,'',NULL);
+INSERT INTO `plo1j_tienda_orderitems` VALUES (71,45,NULL,1,'','','','Ferrari One 200',1,8.74000,'0.00000',0.00000,8.74000,0.87400,0.00000,0.00000,NULL,0.00000,'0.0000','2012-11-05 03:49:17',0,0.00000,0,0,'',0,0,'',0.00000,0,0,0,0,'',NULL);
+INSERT INTO `plo1j_tienda_orderitems` VALUES (72,45,NULL,4,'2,6','Bag Color: Green, Type Of Bagel: Everything','12334456GREENBAGEVERYTHING','Chris\' Awesome Coffee',1,56.00000,'+3.00000',0.00000,44.25000,4.42500,0.00000,0.00000,NULL,2.00000,'3','2012-11-05 03:49:17',0,0.00000,0,0,'',0,0,'',0.00000,0,0,0,0,'',NULL);
+INSERT INTO `plo1j_tienda_orderitems` VALUES (73,46,NULL,4,'2,4','Bag Color: Green, Type Of Bagel: Plain','12334456GREENBAGPLAIN','Chris\' Awesome Coffee',1,56.00000,'-2.00000',0.00000,40.50000,4.05000,0.00000,0.00000,NULL,1.00000,'2','2012-11-05 03:51:19',0,0.00000,0,0,'',0,0,'',0.00000,0,0,0,0,'',NULL);
+INSERT INTO `plo1j_tienda_orderitems` VALUES (74,47,NULL,4,'2,4','Bag Color: Green, Type Of Bagel: Plain','12334456GREENBAGPLAIN','Chris\' Awesome Coffee',1,56.00000,'-2.00000',0.00000,40.50000,4.05000,0.00000,0.00000,NULL,1.00000,'2','2012-11-05 04:00:08',0,0.00000,0,0,'',0,0,'',0.00000,0,0,0,0,'',NULL);
+INSERT INTO `plo1j_tienda_orderitems` VALUES (75,48,NULL,6,'13','Size: BIg','ADMINBIGGER','Become An Admin of this Site',1,10.00000,'+1.00000',0.00000,11.00000,1.10000,0.00000,0.00000,NULL,1.00000,'1','2012-11-05 04:15:38',0,0.00000,0,0,'',0,0,'',0.00000,0,0,0,0,'',NULL);
+INSERT INTO `plo1j_tienda_orderitems` VALUES (76,49,NULL,1,'','','','Ferrari One 200',1,8.74000,'0.00000',0.00000,8.74000,0.87400,0.00000,0.00000,NULL,NULL,'','2012-11-05 04:38:48',0,0.00000,0,0,'',0,0,'',0.00000,0,0,0,0,'',NULL);
+INSERT INTO `plo1j_tienda_orderitems` VALUES (77,50,NULL,1,'','','','Ferrari One 200',1,8.74000,'0.00000',0.00000,8.74000,0.87400,0.00000,0.00000,NULL,NULL,'','2012-11-05 04:40:03',0,0.00000,0,0,'',0,0,'',0.00000,0,0,0,0,'',NULL);
+INSERT INTO `plo1j_tienda_orderitems` VALUES (78,51,NULL,1,'','','','Ferrari One 200',1,8.74000,'0.00000',0.00000,8.74000,0.87400,0.00000,0.00000,NULL,NULL,'','2012-11-05 04:45:03',0,0.00000,0,0,'',0,0,'',0.00000,0,0,0,0,'',NULL);
 /*!40000 ALTER TABLE `plo1j_tienda_orderitems` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4851,7 +4940,7 @@ CREATE TABLE `plo1j_tienda_orderpayments` (
   KEY `idx_order_payment_order_id` (`order_id`),
   KEY `fk_Orders_OrderPayment` (`order_id`),
   CONSTRAINT `fk_Orders_OrderPayment` FOREIGN KEY (`order_id`) REFERENCES `plo1j_tienda_orders` (`order_id`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4901,6 +4990,14 @@ INSERT INTO `plo1j_tienda_orderpayments` VALUES (39,40,'payment_paypal',61.60000
 INSERT INTO `plo1j_tienda_orderpayments` VALUES (40,41,'payment_paypal',61.60000,'','Incomplete','','2012-11-05 02:46:07');
 INSERT INTO `plo1j_tienda_orderpayments` VALUES (41,42,'payment_paypal',69.30000,'','Incomplete','','2012-11-05 02:54:08');
 INSERT INTO `plo1j_tienda_orderpayments` VALUES (42,43,'payment_paypal',9.61400,'','Incomplete','','2012-11-05 03:21:32');
+INSERT INTO `plo1j_tienda_orderpayments` VALUES (43,44,'payment_paypal',60.48900,'','Incomplete','','2012-11-05 03:48:04');
+INSERT INTO `plo1j_tienda_orderpayments` VALUES (44,45,'payment_paypal',60.48900,'','Incomplete','','2012-11-05 03:49:17');
+INSERT INTO `plo1j_tienda_orderpayments` VALUES (45,46,'payment_paypal',46.75000,'97225768GX385660A','Completed','mc_gross = 46.75\ninvoice = 45\nprotection_eligibility = Eligible\naddress_status = confirmed\nitem_number1 = 4\npayer_id = HXQAR3GT8QDNN\ntax = 4.05\naddress_street = 1 Main St\npayment_date = 19:49:37 Nov 04, 2012 PST\npayment_status = Completed\ncharset = windows-1252\naddress_zip = 95131\nmc_shipping = 0.00\nmc_handling = 2.20\nfirst_name = Christopher\nmc_fee = 1.66\naddress_country_code = US\naddress_name = Christopher French\nnotify_version = 3.7\ncustom = 45\npayer_status = verified\nbusiness = chris_1351960820_biz@ammonitenetworks.com\naddress_country = United States\nnum_cart_items = 1\nmc_handling1 = 0.00\naddress_city = San Jose\nverify_sign = ArPRV52tBRU2WTRgR9semoT6ee8YAPmlW9u2HNfpxQ8HesHdEvxhJsfw\npayer_email = chris_1351962092_per@ammonitenetworks.com\nmc_shipping1 = 0.00\ntax1 = 0.00\ntxn_id = 97225768GX385660A\npayment_type = instant\nlast_name = French\naddress_state = CA\nitem_name1 = Chris\nreceiver_email = chris_1351960820_biz@ammonitenetworks.com\npayment_fee = 1.66\nquantity1 = 1\nreceiver_id = 87EA2S5S5LF8U\ntxn_type = cart\nmc_gross_1 = 40.50\nmc_currency = USD\nresidence_country = US\ntest_ipn = 1\ntransaction_subject = 45\npayment_gross = 46.75\nipn_track_id = 1ba22fa1ad607\ntask = confirmPayment','2012-11-05 03:51:19');
+INSERT INTO `plo1j_tienda_orderpayments` VALUES (46,47,'payment_paypal',46.75000,'3UJ49934FA1563918','Completed','mc_gross = 46.75\ninvoice = 46\nprotection_eligibility = Eligible\naddress_status = confirmed\nitem_number1 = 4\npayer_id = HXQAR3GT8QDNN\ntax = 4.05\naddress_street = 1 Main St\npayment_date = 19:58:04 Nov 04, 2012 PST\npayment_status = Completed\ncharset = windows-1252\naddress_zip = 95131\nmc_shipping = 0.00\nmc_handling = 2.20\nfirst_name = Christopher\nmc_fee = 1.66\naddress_country_code = US\naddress_name = Christopher French\nnotify_version = 3.7\ncustom = 46\npayer_status = verified\nbusiness = chris_1351960820_biz@ammonitenetworks.com\naddress_country = United States\nnum_cart_items = 1\nmc_handling1 = 0.00\naddress_city = San Jose\nverify_sign = AY3Oy5TuLHK3VSbOcbYZZps0CTpHAoIF2gdgIls73Lb-qGO.8-UWKyJ7\npayer_email = chris_1351962092_per@ammonitenetworks.com\nmc_shipping1 = 0.00\ntax1 = 0.00\ntxn_id = 3UJ49934FA1563918\npayment_type = instant\nlast_name = French\naddress_state = CA\nitem_name1 = Chris\nreceiver_email = chris_1351960820_biz@ammonitenetworks.com\npayment_fee = 1.66\nquantity1 = 1\nreceiver_id = 87EA2S5S5LF8U\ntxn_type = cart\nmc_gross_1 = 40.50\nmc_currency = USD\nresidence_country = US\ntest_ipn = 1\ntransaction_subject = 46\npayment_gross = 46.75\nipn_track_id = a043a44174484\ntask = confirmPayment','2012-11-05 04:00:08');
+INSERT INTO `plo1j_tienda_orderpayments` VALUES (47,48,'payment_paypal',12.10000,'4WX3187082498614H','Completed','mc_gross = 12.10\ninvoice = 47\nprotection_eligibility = Eligible\naddress_status = confirmed\nitem_number1 = 6\npayer_id = HXQAR3GT8QDNN\ntax = 1.10\naddress_street = 1 Main St\npayment_date = 20:13:42 Nov 04, 2012 PST\npayment_status = Completed\ncharset = windows-1252\naddress_zip = 95131\nmc_shipping = 0.00\nmc_handling = 0.00\nfirst_name = Christopher\nmc_fee = 0.65\naddress_country_code = US\naddress_name = Christopher French\nnotify_version = 3.7\ncustom = 47\npayer_status = verified\nbusiness = chris_1351960820_biz@ammonitenetworks.com\naddress_country = United States\nnum_cart_items = 1\nmc_handling1 = 0.00\naddress_city = San Jose\nverify_sign = AFcWxV21C7fd0v3bYYYRCpSSRl31AajhAmWf0cExPZ-JknVBFj-DdI3W\npayer_email = chris_1351962092_per@ammonitenetworks.com\nmc_shipping1 = 0.00\ntax1 = 0.00\ntxn_id = 4WX3187082498614H\npayment_type = instant\nlast_name = French\naddress_state = CA\nitem_name1 = Become An Admin of this Site | (Model: BEADMIN |SKU: ADMINBIGGER)\nreceiver_email = chris_1351960820_biz@ammonitenetworks.com\npayment_fee = 0.65\nquantity1 = 1\nreceiver_id = 87EA2S5S5LF8U\ntxn_type = cart\nmc_gross_1 = 11.00\nmc_currency = USD\nresidence_country = US\ntest_ipn = 1\ntransaction_subject = 47\npayment_gross = 12.10\nipn_track_id = c6eb03187b82a\ntask = confirmPayment','2012-11-05 04:15:38');
+INSERT INTO `plo1j_tienda_orderpayments` VALUES (48,49,'payment_paypal',9.61400,'','Incomplete','','2012-11-05 04:38:48');
+INSERT INTO `plo1j_tienda_orderpayments` VALUES (49,50,'payment_offline',9.61400,'','Incomplete','','2012-11-05 04:40:03');
+INSERT INTO `plo1j_tienda_orderpayments` VALUES (50,51,'payment_offline',9.61400,'','Incomplete','','2012-11-05 04:45:03');
 /*!40000 ALTER TABLE `plo1j_tienda_orderpayments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4948,9 +5045,9 @@ CREATE TABLE `plo1j_tienda_orders` (
   KEY `idx_orders_order_hash` (`order_hash`),
   KEY `fk_OrderState_Order` (`order_state_id`),
   KEY `fk_currencies_orders` (`currency_id`),
-  CONSTRAINT `fk_OrderState_Order` FOREIGN KEY (`order_state_id`) REFERENCES `plo1j_tienda_orderstates` (`order_state_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_currencies_orders` FOREIGN KEY (`currency_id`) REFERENCES `plo1j_tienda_currencies` (`currency_id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
+  CONSTRAINT `fk_currencies_orders` FOREIGN KEY (`currency_id`) REFERENCES `plo1j_tienda_currencies` (`currency_id`) ON UPDATE CASCADE,
+  CONSTRAINT `fk_OrderState_Order` FOREIGN KEY (`order_state_id`) REFERENCES `plo1j_tienda_orderstates` (`order_state_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4966,7 +5063,7 @@ INSERT INTO `plo1j_tienda_orders` VALUES (4,406,0,'',68.00000,66.00000,0.00,2.00
 INSERT INTO `plo1j_tienda_orders` VALUES (5,406,0,'',68.00000,66.00000,0.00,2.00,0.00,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,5,'2012-11-03 17:28:59','2012-11-03 17:28:59','','68.107.49.76',1,0,0.00000,0,0,'',0,0,'',0.00000,1,0,'');
 INSERT INTO `plo1j_tienda_orders` VALUES (6,406,0,'',68.00000,66.00000,0.00,2.00,0.00,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,15,'2012-11-03 17:37:03','2012-11-03 17:37:03','','68.107.49.76',1,0,0.00000,0,0,'',0,0,'',0.00000,0,0,'');
 INSERT INTO `plo1j_tienda_orders` VALUES (7,406,0,'',68.00000,66.00000,0.00,2.00,0.00,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,15,'2012-11-03 17:37:43','2012-11-03 17:37:43','','68.107.49.76',1,0,0.00000,0,0,'',0,0,'',0.00000,0,0,'');
-INSERT INTO `plo1j_tienda_orders` VALUES (8,406,0,'',196.25000,194.25000,0.00,2.00,0.00,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,15,'2012-11-04 00:56:38','2012-11-04 00:56:38','','127.0.0.1',1,0,0.00000,0,0,'',0,0,'',0.00000,0,0,'');
+INSERT INTO `plo1j_tienda_orders` VALUES (8,406,0,'',196.25000,194.25000,0.00,2.00,0.00,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,5,'2012-11-04 00:56:38','2012-11-04 00:56:38','','127.0.0.1',1,0,0.00000,0,0,'',0,0,'',0.00000,1,0,'');
 INSERT INTO `plo1j_tienda_orders` VALUES (9,406,0,'',196.25000,194.25000,0.00,2.00,0.00,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,15,'2012-11-04 00:57:56','2012-11-04 00:57:56','','127.0.0.1',1,0,0.00000,0,0,'',0,0,'',0.00000,0,0,'');
 INSERT INTO `plo1j_tienda_orders` VALUES (10,406,0,'',196.25000,194.25000,0.00,2.00,0.00,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,15,'2012-11-04 01:05:12','2012-11-04 01:05:12','','127.0.0.1',1,0,0.00000,0,0,'',0,0,'',0.00000,0,0,'');
 INSERT INTO `plo1j_tienda_orders` VALUES (11,406,0,'',196.25000,194.25000,0.00,2.00,0.00,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,15,'2012-11-04 01:07:38','2012-11-04 01:07:38','','127.0.0.1',1,0,0.00000,0,0,'',0,0,'',0.00000,0,0,'');
@@ -5001,6 +5098,14 @@ INSERT INTO `plo1j_tienda_orders` VALUES (40,412,0,'',61.60000,54.00000,5.40,2.0
 INSERT INTO `plo1j_tienda_orders` VALUES (41,412,0,'',61.60000,54.00000,5.40,2.00,0.20,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,15,'2012-11-05 02:46:07','2012-11-05 02:46:07','','127.0.0.1',1,0,0.00000,0,0,'',0,0,'',0.00000,0,0,'');
 INSERT INTO `plo1j_tienda_orders` VALUES (42,406,0,'',69.30000,61.00000,6.10,2.00,0.20,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,15,'2012-11-05 02:54:08','2012-11-05 02:54:08','','127.0.0.1',1,0,0.00000,0,0,'',0,0,'',0.00000,0,0,'');
 INSERT INTO `plo1j_tienda_orders` VALUES (43,406,0,'',9.61400,8.74000,0.87,0.00,0.00,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,15,'2012-11-05 03:21:32','2012-11-05 03:21:32','','127.0.0.1',0,0,0.00000,0,0,'',0,0,'',0.00000,0,0,'');
+INSERT INTO `plo1j_tienda_orders` VALUES (44,406,0,'',60.48900,52.99000,5.30,2.00,0.20,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,15,'2012-11-05 03:48:04','2012-11-05 03:48:04','','68.107.49.76',1,0,0.00000,0,0,'',0,0,'',0.00000,0,0,'');
+INSERT INTO `plo1j_tienda_orders` VALUES (45,406,0,'',60.48900,52.99000,5.30,2.00,0.20,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,15,'2012-11-05 03:49:17','2012-11-05 03:49:17','','68.107.49.76',1,0,0.00000,0,0,'',0,0,'',0.00000,0,0,'');
+INSERT INTO `plo1j_tienda_orders` VALUES (46,406,0,'',46.75000,40.50000,4.05,2.00,0.20,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,17,'2012-11-05 03:51:19','2012-11-05 03:51:19','','68.107.49.76',1,0,0.00000,0,0,'',0,0,'',0.00000,1,0,'');
+INSERT INTO `plo1j_tienda_orders` VALUES (47,406,0,'',46.75000,40.50000,4.05,2.00,0.20,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,5,'2012-11-05 04:00:08','2012-11-05 04:00:08','','68.107.49.76',1,0,0.00000,0,0,'',0,0,'',0.00000,1,0,'');
+INSERT INTO `plo1j_tienda_orders` VALUES (48,413,0,'',12.10000,11.00000,1.10,0.00,0.00,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,5,'2012-11-05 04:15:38','2012-11-05 04:15:38','','68.107.49.76',0,0,0.00000,0,0,'',0,0,'',0.00000,1,0,'');
+INSERT INTO `plo1j_tienda_orders` VALUES (49,406,0,'',9.61400,8.74000,0.87,0.00,0.00,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,15,'2012-11-05 04:38:48','2012-11-05 04:38:48','','68.107.49.76',0,0,0.00000,0,0,'',0,0,'',0.00000,0,0,'');
+INSERT INTO `plo1j_tienda_orders` VALUES (50,406,0,'',9.61400,8.74000,0.87,0.00,0.00,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,15,'2012-11-05 04:40:03','2012-11-05 04:40:03','','68.107.49.76',0,0,0.00000,0,0,'',0,0,'',0.00000,0,0,'');
+INSERT INTO `plo1j_tienda_orders` VALUES (51,406,0,'',9.61400,8.74000,0.87,0.00,0.00,0.00,0.00,'{\"_suffix\":\"currencies\",\"currency_name\":\"US Dollar\",\"currency_code\":\"USD\",\"symbol_left\":\"$\",\"symbol_right\":\"\",\"currency_decimals\":\"2\",\"decimal_separator\":\".\",\"thousands_separator\":\",\",\"exchange_rate\":\"0.00000000\",\"updated_date\":\"0000-00-00 00:00:00\",\"_app\":null}',1,15,'2012-11-05 04:45:03','2012-11-05 04:45:03','','68.107.49.76',0,0,0.00000,0,0,'',0,0,'',0.00000,0,0,'');
 /*!40000 ALTER TABLE `plo1j_tienda_orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5025,7 +5130,7 @@ CREATE TABLE `plo1j_tienda_ordershippings` (
   PRIMARY KEY (`ordershipping_id`),
   KEY `idx_order_shipping_order_id` (`order_id`),
   KEY `fk_Orders_OrderShipping` (`order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COMMENT='Stores each of the shipping records for orders';
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 COMMENT='Stores each of the shipping records for orders';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5067,6 +5172,13 @@ INSERT INTO `plo1j_tienda_ordershippings` VALUES (31,39,'shipping_standard',1.00
 INSERT INTO `plo1j_tienda_ordershippings` VALUES (32,40,'shipping_standard',1.00000,'USPS','0',0.20000,1.00000,'','2012-11-05 02:45:28');
 INSERT INTO `plo1j_tienda_ordershippings` VALUES (33,41,'shipping_standard',1.00000,'USPS','0',0.20000,1.00000,'','2012-11-05 02:46:07');
 INSERT INTO `plo1j_tienda_ordershippings` VALUES (34,42,'shipping_standard',1.00000,'USPS','0',0.20000,1.00000,'','2012-11-05 02:54:08');
+INSERT INTO `plo1j_tienda_ordershippings` VALUES (35,44,'shipping_standard',1.00000,'USPS','0',0.20000,1.00000,'','2012-11-05 03:48:04');
+INSERT INTO `plo1j_tienda_ordershippings` VALUES (36,45,'shipping_standard',1.00000,'USPS','0',0.20000,1.00000,'','2012-11-05 03:49:17');
+INSERT INTO `plo1j_tienda_ordershippings` VALUES (37,46,'shipping_standard',1.00000,'USPS','0',0.20000,1.00000,'','2012-11-05 03:51:19');
+INSERT INTO `plo1j_tienda_ordershippings` VALUES (38,47,'shipping_standard',1.00000,'USPS','0',0.20000,1.00000,'','2012-11-05 04:00:08');
+INSERT INTO `plo1j_tienda_ordershippings` VALUES (39,49,'',0.00000,'','',0.00000,0.00000,'','2012-11-05 04:38:48');
+INSERT INTO `plo1j_tienda_ordershippings` VALUES (40,50,'',0.00000,'','',0.00000,0.00000,'','2012-11-05 04:40:03');
+INSERT INTO `plo1j_tienda_ordershippings` VALUES (41,51,'',0.00000,'','',0.00000,0.00000,'','2012-11-05 04:45:03');
 /*!40000 ALTER TABLE `plo1j_tienda_ordershippings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5126,7 +5238,7 @@ CREATE TABLE `plo1j_tienda_ordertaxclasses` (
   PRIMARY KEY (`ordertaxclass_id`),
   KEY `order_id` (`order_id`),
   KEY `tax_class_id` (`tax_class_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5151,6 +5263,14 @@ INSERT INTO `plo1j_tienda_ordertaxclasses` VALUES (13,40,5.40000,'',1);
 INSERT INTO `plo1j_tienda_ordertaxclasses` VALUES (14,41,5.40000,'',1);
 INSERT INTO `plo1j_tienda_ordertaxclasses` VALUES (15,42,6.10000,'',1);
 INSERT INTO `plo1j_tienda_ordertaxclasses` VALUES (16,43,0.87400,'',1);
+INSERT INTO `plo1j_tienda_ordertaxclasses` VALUES (17,44,5.29900,'',1);
+INSERT INTO `plo1j_tienda_ordertaxclasses` VALUES (18,45,5.29900,'',1);
+INSERT INTO `plo1j_tienda_ordertaxclasses` VALUES (19,46,4.05000,'',1);
+INSERT INTO `plo1j_tienda_ordertaxclasses` VALUES (20,47,4.05000,'',1);
+INSERT INTO `plo1j_tienda_ordertaxclasses` VALUES (21,48,1.10000,'',1);
+INSERT INTO `plo1j_tienda_ordertaxclasses` VALUES (22,49,0.87400,'',1);
+INSERT INTO `plo1j_tienda_ordertaxclasses` VALUES (23,50,0.87400,'',1);
+INSERT INTO `plo1j_tienda_ordertaxclasses` VALUES (24,51,0.87400,'',1);
 /*!40000 ALTER TABLE `plo1j_tienda_ordertaxclasses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5173,7 +5293,7 @@ CREATE TABLE `plo1j_tienda_ordertaxrates` (
   PRIMARY KEY (`ordertaxrate_id`),
   KEY `order_id` (`order_id`),
   KEY `tax_rate_id` (`tax_rate_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5198,6 +5318,14 @@ INSERT INTO `plo1j_tienda_ordertaxrates` VALUES (13,40,10.0000,5.40000,'USA',0,1
 INSERT INTO `plo1j_tienda_ordertaxrates` VALUES (14,41,10.0000,5.40000,'USA',0,1,1);
 INSERT INTO `plo1j_tienda_ordertaxrates` VALUES (15,42,10.0000,6.10000,'USA',0,1,1);
 INSERT INTO `plo1j_tienda_ordertaxrates` VALUES (16,43,10.0000,0.87400,'USA',0,1,1);
+INSERT INTO `plo1j_tienda_ordertaxrates` VALUES (17,44,10.0000,5.29900,'USA',0,1,1);
+INSERT INTO `plo1j_tienda_ordertaxrates` VALUES (18,45,10.0000,5.29900,'USA',0,1,1);
+INSERT INTO `plo1j_tienda_ordertaxrates` VALUES (19,46,10.0000,4.05000,'USA',0,1,1);
+INSERT INTO `plo1j_tienda_ordertaxrates` VALUES (20,47,10.0000,4.05000,'USA',0,1,1);
+INSERT INTO `plo1j_tienda_ordertaxrates` VALUES (21,48,10.0000,1.10000,'USA',0,1,1);
+INSERT INTO `plo1j_tienda_ordertaxrates` VALUES (22,49,10.0000,0.87400,'USA',0,1,1);
+INSERT INTO `plo1j_tienda_ordertaxrates` VALUES (23,50,10.0000,0.87400,'USA',0,1,1);
+INSERT INTO `plo1j_tienda_ordertaxrates` VALUES (24,51,10.0000,0.87400,'USA',0,1,1);
 /*!40000 ALTER TABLE `plo1j_tienda_ordertaxrates` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5356,8 +5484,8 @@ CREATE TABLE `plo1j_tienda_productcategoryxref` (
   KEY `idx_product_category_xref_product_id` (`product_id`),
   KEY `fk_Product_ProductCategory` (`product_id`),
   KEY `fk_Category_ProductCategory` (`category_id`),
-  CONSTRAINT `fk_Product_ProductCategory` FOREIGN KEY (`product_id`) REFERENCES `plo1j_tienda_products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_Category_ProductCategory` FOREIGN KEY (`category_id`) REFERENCES `plo1j_tienda_categories` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `fk_Category_ProductCategory` FOREIGN KEY (`category_id`) REFERENCES `plo1j_tienda_categories` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_Product_ProductCategory` FOREIGN KEY (`product_id`) REFERENCES `plo1j_tienda_products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -5482,8 +5610,8 @@ CREATE TABLE `plo1j_tienda_productcouponxref` (
   KEY `idx_product_coupon_xref_product_id` (`product_id`),
   KEY `fk_Product_ProductCoupon` (`product_id`),
   KEY `fk_Coupon_ProductCoupon` (`coupon_id`),
-  CONSTRAINT `fk_Product_ProductCoupon` FOREIGN KEY (`product_id`) REFERENCES `plo1j_tienda_products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_Coupon_ProductCoupon` FOREIGN KEY (`coupon_id`) REFERENCES `plo1j_tienda_coupons` (`coupon_id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `fk_Coupon_ProductCoupon` FOREIGN KEY (`coupon_id`) REFERENCES `plo1j_tienda_coupons` (`coupon_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_Product_ProductCoupon` FOREIGN KEY (`product_id`) REFERENCES `plo1j_tienda_products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -5544,7 +5672,7 @@ CREATE TABLE `plo1j_tienda_productdownloads` (
   PRIMARY KEY (`productdownload_id`),
   KEY `fk_Product_ProductDownload` (`product_id`),
   CONSTRAINT `fk_Product_ProductDownload` FOREIGN KEY (`product_id`) REFERENCES `plo1j_tienda_products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5563,6 +5691,10 @@ INSERT INTO `plo1j_tienda_productdownloads` VALUES (7,4,1,411,25,'2012-11-04 21:
 INSERT INTO `plo1j_tienda_productdownloads` VALUES (8,4,1,411,25,'2012-11-04 21:35:53','0000-00-00 00:00:00',-1);
 INSERT INTO `plo1j_tienda_productdownloads` VALUES (9,4,1,412,34,'2012-11-05 00:25:13','0000-00-00 00:00:00',-1);
 INSERT INTO `plo1j_tienda_productdownloads` VALUES (10,4,1,412,34,'2012-11-05 00:24:58','0000-00-00 00:00:00',-1);
+INSERT INTO `plo1j_tienda_productdownloads` VALUES (11,4,1,406,46,'2012-11-05 03:52:47','0000-00-00 00:00:00',-1);
+INSERT INTO `plo1j_tienda_productdownloads` VALUES (12,4,1,406,8,'2012-11-05 03:57:05','0000-00-00 00:00:00',-3);
+INSERT INTO `plo1j_tienda_productdownloads` VALUES (13,4,1,406,8,'2012-11-05 03:57:05','0000-00-00 00:00:00',-1);
+INSERT INTO `plo1j_tienda_productdownloads` VALUES (14,4,1,406,47,'2012-11-05 04:01:13','0000-00-00 00:00:00',-1);
 /*!40000 ALTER TABLE `plo1j_tienda_productdownloads` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5700,13 +5832,13 @@ CREATE TABLE `plo1j_tienda_productquantities` (
 
 LOCK TABLES `plo1j_tienda_productquantities` WRITE;
 /*!40000 ALTER TABLE `plo1j_tienda_productquantities` DISABLE KEYS */;
-INSERT INTO `plo1j_tienda_productquantities` VALUES (5,'1,4',4,0,1);
-INSERT INTO `plo1j_tienda_productquantities` VALUES (6,'2,4',4,0,5);
+INSERT INTO `plo1j_tienda_productquantities` VALUES (5,'1,4',4,0,0);
+INSERT INTO `plo1j_tienda_productquantities` VALUES (6,'2,4',4,0,3);
 INSERT INTO `plo1j_tienda_productquantities` VALUES (7,'3,4',4,0,5);
 INSERT INTO `plo1j_tienda_productquantities` VALUES (8,'1,5',4,0,0);
 INSERT INTO `plo1j_tienda_productquantities` VALUES (9,'2,5',4,0,5);
 INSERT INTO `plo1j_tienda_productquantities` VALUES (10,'3,5',4,0,5);
-INSERT INTO `plo1j_tienda_productquantities` VALUES (11,'1,6',4,0,1);
+INSERT INTO `plo1j_tienda_productquantities` VALUES (11,'1,6',4,0,0);
 INSERT INTO `plo1j_tienda_productquantities` VALUES (12,'2,6',4,0,5);
 INSERT INTO `plo1j_tienda_productquantities` VALUES (13,'3,6',4,0,5);
 INSERT INTO `plo1j_tienda_productquantities` VALUES (16,'7,10',5,0,0);
@@ -6003,8 +6135,8 @@ CREATE TABLE `plo1j_tienda_taxrates` (
   PRIMARY KEY (`tax_rate_id`),
   KEY `fk_TaxClass_TaxRates` (`tax_class_id`),
   KEY `fk_geozones_taxrates` (`geozone_id`),
-  CONSTRAINT `fk_TaxClass_TaxRates` FOREIGN KEY (`tax_class_id`) REFERENCES `plo1j_tienda_taxclasses` (`tax_class_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_geozones_taxrates` FOREIGN KEY (`geozone_id`) REFERENCES `plo1j_tienda_geozones` (`geozone_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_geozones_taxrates` FOREIGN KEY (`geozone_id`) REFERENCES `plo1j_tienda_geozones` (`geozone_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_TaxClass_TaxRates` FOREIGN KEY (`tax_class_id`) REFERENCES `plo1j_tienda_taxclasses` (`tax_class_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -6041,6 +6173,12 @@ CREATE TABLE `plo1j_tienda_usergroupxref` (
 
 LOCK TABLES `plo1j_tienda_usergroupxref` WRITE;
 /*!40000 ALTER TABLE `plo1j_tienda_usergroupxref` DISABLE KEYS */;
+INSERT INTO `plo1j_tienda_usergroupxref` VALUES (1,412);
+INSERT INTO `plo1j_tienda_usergroupxref` VALUES (1,411);
+INSERT INTO `plo1j_tienda_usergroupxref` VALUES (2,406);
+INSERT INTO `plo1j_tienda_usergroupxref` VALUES (2,407);
+INSERT INTO `plo1j_tienda_usergroupxref` VALUES (2,408);
+INSERT INTO `plo1j_tienda_usergroupxref` VALUES (2,409);
 /*!40000 ALTER TABLE `plo1j_tienda_usergroupxref` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6069,7 +6207,7 @@ CREATE TABLE `plo1j_tienda_userinfo` (
   `credits_withdrawable_total` decimal(12,5) NOT NULL,
   PRIMARY KEY (`user_info_id`),
   KEY `idx_user_info_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6080,6 +6218,7 @@ LOCK TABLES `plo1j_tienda_userinfo` WRITE;
 /*!40000 ALTER TABLE `plo1j_tienda_userinfo` DISABLE KEYS */;
 INSERT INTO `plo1j_tienda_userinfo` VALUES (1,-11,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'newuser@newuser.com',NULL,0.00000,0.00000);
 INSERT INTO `plo1j_tienda_userinfo` VALUES (2,412,NULL,'French','Christopher','','French','chris',NULL,NULL,0,'fakeuser@fakesuser.com',NULL,0.00000,0.00000);
+INSERT INTO `plo1j_tienda_userinfo` VALUES (3,413,NULL,'Sauce','Awesome','','Ammonite Networks','chris',NULL,NULL,0,'newuser@emailaddress.com',NULL,0.00000,0.00000);
 /*!40000 ALTER TABLE `plo1j_tienda_userinfo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10287,7 +10426,7 @@ CREATE TABLE `plo1j_update_sites` (
   `enabled` int(11) DEFAULT '0',
   `last_check_timestamp` bigint(20) DEFAULT '0',
   PRIMARY KEY (`update_site_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='Update Sites';
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='Update Sites';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10296,11 +10435,11 @@ CREATE TABLE `plo1j_update_sites` (
 
 LOCK TABLES `plo1j_update_sites` WRITE;
 /*!40000 ALTER TABLE `plo1j_update_sites` DISABLE KEYS */;
-INSERT INTO `plo1j_update_sites` VALUES (1,'Joomla Core','collection','http://update.joomla.org/core/list.xml',1,1351989706);
-INSERT INTO `plo1j_update_sites` VALUES (2,'Joomla Extension Directory','collection','http://update.joomla.org/jed/list.xml',1,1351989709);
-INSERT INTO `plo1j_update_sites` VALUES (3,'Accredited Joomla! Translations','collection','http://update.joomla.org/language/translationlist.xml',1,1351989706);
-INSERT INTO `plo1j_update_sites` VALUES (5,'Dioscouri System Plugin Updates','extension','http://updates.dioscouri.com/plg_system_dioscouri/updates.xml',1,1351989706);
-INSERT INTO `plo1j_update_sites` VALUES (6,'Dioscouri Library Updates','extension','http://updates.dioscouri.com/library/updates.xml',1,1351989706);
+INSERT INTO `plo1j_update_sites` VALUES (1,'Joomla Core','collection','http://update.joomla.org/core/list.xml',1,1355528680);
+INSERT INTO `plo1j_update_sites` VALUES (2,'Joomla Extension Directory','collection','http://update.joomla.org/jed/list.xml',1,1355528680);
+INSERT INTO `plo1j_update_sites` VALUES (3,'Accredited Joomla! Translations','collection','http://update.joomla.org/language/translationlist.xml',1,1355528680);
+INSERT INTO `plo1j_update_sites` VALUES (5,'Dioscouri System Plugin Updates','extension','http://updates.dioscouri.com/plg_system_dioscouri/updates.xml',1,1355528680);
+INSERT INTO `plo1j_update_sites` VALUES (7,'Dioscouri Library Updates','extension','http://updates.dioscouri.com/library/updates.xml',1,1355528680);
 /*!40000 ALTER TABLE `plo1j_update_sites` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10328,7 +10467,7 @@ INSERT INTO `plo1j_update_sites_extensions` VALUES (1,700);
 INSERT INTO `plo1j_update_sites_extensions` VALUES (2,700);
 INSERT INTO `plo1j_update_sites_extensions` VALUES (3,600);
 INSERT INTO `plo1j_update_sites_extensions` VALUES (5,10001);
-INSERT INTO `plo1j_update_sites_extensions` VALUES (6,10059);
+INSERT INTO `plo1j_update_sites_extensions` VALUES (7,10066);
 /*!40000 ALTER TABLE `plo1j_update_sites_extensions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10355,7 +10494,7 @@ CREATE TABLE `plo1j_updates` (
   `detailsurl` text NOT NULL,
   `infourl` text NOT NULL,
   PRIMARY KEY (`update_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8 COMMENT='Available Updates';
+) ENGINE=InnoDB AUTO_INCREMENT=155 DEFAULT CHARSET=utf8 COMMENT='Available Updates';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10443,6 +10582,80 @@ INSERT INTO `plo1j_updates` VALUES (76,3,0,0,'Croatian','','pkg_hr-HR','package'
 INSERT INTO `plo1j_updates` VALUES (77,3,0,0,'Croatian','','pkg_hr-HR','package','',0,'2.5.7.2','','http://update.joomla.org/language/details/hr-HR_details.xml','');
 INSERT INTO `plo1j_updates` VALUES (78,3,0,0,'Uyghur','','pkg_ug-CN','package','',0,'2.5.7.1','','http://update.joomla.org/language/details/ug-CN_details.xml','');
 INSERT INTO `plo1j_updates` VALUES (79,3,0,0,'Uyghur','','pkg_ug-CN','package','',0,'2.5.7.1','','http://update.joomla.org/language/details/ug-CN_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (80,3,0,0,'Croatian','','pkg_hr-HR','package','',0,'2.5.7.2','','http://update.joomla.org/language/details/hr-HR_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (81,3,0,0,'Uyghur','','pkg_ug-CN','package','',0,'2.5.7.1','','http://update.joomla.org/language/details/ug-CN_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (82,1,700,0,'Joomla','','joomla','file','',0,'2.5.8','','http://update.joomla.org/core/extension.xml','');
+INSERT INTO `plo1j_updates` VALUES (83,3,0,0,'Danish','','pkg_da-DK','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/da-DK_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (84,3,0,0,'Swedish','','pkg_sv-SE','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/sv-SE_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (85,3,0,0,'Hungarian','','pkg_hu-HU','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/hu-HU_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (86,3,0,0,'French','','pkg_fr-FR','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/fr-FR_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (87,3,0,0,'Italian','','pkg_it-IT','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/it-IT_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (88,3,0,0,'Spanish','','pkg_es-ES','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/es-ES_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (89,3,0,0,'Dutch','','pkg_nl-NL','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/nl-NL_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (90,3,0,0,'Turkish','','pkg_tr-TR','package','',0,'2.5.7.2','','http://update.joomla.org/language/details/tr-TR_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (91,3,0,0,'Slovak','','pkg_sk-SK','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/sk-SK_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (92,3,0,0,'Latvian','','pkg_lv-LV','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/lv-LV_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (93,3,0,0,'Flemish','','pkg_nl-BE','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/nl-BE_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (94,3,0,0,'Japanese','','pkg_ja-JP','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/ja-JP_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (95,3,0,0,'Arabic Unitag','','pkg_ar-AA','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/ar-AA_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (96,3,0,0,'German','','pkg_de-DE','package','',0,'2.5.8.2','','http://update.joomla.org/language/details/de-DE_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (97,3,0,0,'Norwegian Bokmal','','pkg_nb-NO','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/nb-NO_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (98,3,0,0,'English AU','','pkg_en-AU','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/en-AU_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (99,3,0,0,'English US','','pkg_en-US','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/en-US_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (100,3,0,0,'Galician','','pkg_gl-ES','package','',0,'2.5.7.3','','http://update.joomla.org/language/details/gl-ES_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (101,3,0,0,'Polish','','pkg_pl-PL','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/pl-PL_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (102,3,0,0,'Syriac','','pkg_sy-IQ','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/sy-IQ_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (103,3,0,0,'Russian','','pkg_ru-RU','package','',0,'2.5.8.4','','http://update.joomla.org/language/details/ru-RU_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (104,3,0,0,'Finnish','','pkg_fi-FI','package','',0,'2.5.8.2','','http://update.joomla.org/language/details/fi-FI_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (105,3,0,0,'Portuguese Brazil','','pkg_pt-BR','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/pt-BR_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (106,3,0,0,'Vietnamese','','pkg_vi-VN','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/vi-VN_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (107,3,0,0,'Kurdish Sorani','','pkg_ckb-IQ','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/ckb-IQ_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (108,3,0,0,'Bosnian','','pkg_bs-BA','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/bs-BA_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (109,3,0,0,'Croatian','','pkg_hr-HR','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/hr-HR_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (110,3,0,0,'Norwegian Nynorsk','','pkg_nn-NO','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/nn-NO_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (111,3,0,0,'Tamil India','','pkg_ta-IN','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/ta-IN_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (112,3,0,0,'Thai','','pkg_th-TH','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/th-TH_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (113,3,0,0,'Uyghur','','pkg_ug-CN','package','',0,'2.5.7.2','','http://update.joomla.org/language/details/ug-CN_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (114,3,0,0,'Swahili','','pkg_sw-KE','package','',0,'2.5.8.2','','http://update.joomla.org/language/details/sw-KE_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (115,5,10001,0,'Dioscouri System Plugin','','dioscouri','plugin','system',0,'3.5.0','','http://updates.dioscouri.com/plg_system_dioscouri/updates.xml','http://dioscouri.com/');
+INSERT INTO `plo1j_updates` VALUES (117,3,0,0,'Danish','','pkg_da-DK','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/da-DK_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (118,3,0,0,'Swedish','','pkg_sv-SE','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/sv-SE_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (119,3,0,0,'Hungarian','','pkg_hu-HU','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/hu-HU_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (120,3,0,0,'French','','pkg_fr-FR','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/fr-FR_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (121,3,0,0,'Italian','','pkg_it-IT','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/it-IT_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (122,3,0,0,'Spanish','','pkg_es-ES','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/es-ES_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (123,3,0,0,'Dutch','','pkg_nl-NL','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/nl-NL_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (124,3,0,0,'Turkish','','pkg_tr-TR','package','',0,'2.5.7.2','','http://update.joomla.org/language/details/tr-TR_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (125,3,0,0,'Indonesian','','pkg_id-ID','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/id-ID_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (126,3,0,0,'Slovak','','pkg_sk-SK','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/sk-SK_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (127,3,0,0,'Belarusian','','pkg_be-BY','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/be-BY_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (128,3,0,0,'Latvian','','pkg_lv-LV','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/lv-LV_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (129,3,0,0,'Flemish','','pkg_nl-BE','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/nl-BE_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (130,3,0,0,'Japanese','','pkg_ja-JP','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/ja-JP_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (131,3,0,0,'Arabic Unitag','','pkg_ar-AA','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/ar-AA_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (132,3,0,0,'German','','pkg_de-DE','package','',0,'2.5.8.2','','http://update.joomla.org/language/details/de-DE_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (133,3,0,0,'Norwegian Bokmal','','pkg_nb-NO','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/nb-NO_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (134,3,0,0,'English AU','','pkg_en-AU','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/en-AU_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (135,3,0,0,'English US','','pkg_en-US','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/en-US_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (136,3,0,0,'Persian','','pkg_fa-IR','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/fa-IR_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (137,3,0,0,'Galician','','pkg_gl-ES','package','',0,'2.5.7.4','','http://update.joomla.org/language/details/gl-ES_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (138,3,0,0,'Polish','','pkg_pl-PL','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/pl-PL_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (139,3,0,0,'Syriac','','pkg_sy-IQ','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/sy-IQ_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (140,3,0,0,'Portuguese','','pkg_pt-PT','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/pt-PT_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (141,3,0,0,'Russian','','pkg_ru-RU','package','',0,'2.5.8.4','','http://update.joomla.org/language/details/ru-RU_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (142,3,0,0,'Finnish','','pkg_fi-FI','package','',0,'2.5.8.2','','http://update.joomla.org/language/details/fi-FI_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (143,3,0,0,'Portuguese Brazil','','pkg_pt-BR','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/pt-BR_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (144,3,0,0,'Vietnamese','','pkg_vi-VN','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/vi-VN_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (145,3,0,0,'Kurdish Sorani','','pkg_ckb-IQ','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/ckb-IQ_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (146,3,0,0,'Bosnian','','pkg_bs-BA','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/bs-BA_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (147,3,0,0,'Croatian','','pkg_hr-HR','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/hr-HR_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (148,3,0,0,'Norwegian Nynorsk','','pkg_nn-NO','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/nn-NO_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (149,3,0,0,'Tamil India','','pkg_ta-IN','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/ta-IN_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (150,3,0,0,'Thai','','pkg_th-TH','package','',0,'2.5.8.1','','http://update.joomla.org/language/details/th-TH_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (151,3,0,0,'Uyghur','','pkg_ug-CN','package','',0,'2.5.7.2','','http://update.joomla.org/language/details/ug-CN_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (152,3,0,0,'Swahili','','pkg_sw-KE','package','',0,'2.5.8.3','','http://update.joomla.org/language/details/sw-KE_details.xml','');
+INSERT INTO `plo1j_updates` VALUES (153,5,0,0,'Dioscouri System Plugin','','dioscouri','plugin','system',0,'3.7.0','','http://updates.dioscouri.com/plg_system_dioscouri/updates.xml','http://dioscouri.com/');
+INSERT INTO `plo1j_updates` VALUES (154,7,10066,0,'Dioscouri Library','Dioscouri Library Package','dioscouri','library','',0,'3.7.0','','http://updates.dioscouri.com/library/updates.xml','http://dioscouri.com/');
 /*!40000 ALTER TABLE `plo1j_updates` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10537,6 +10750,8 @@ INSERT INTO `plo1j_user_usergroup_map` VALUES (410,8);
 INSERT INTO `plo1j_user_usergroup_map` VALUES (411,2);
 INSERT INTO `plo1j_user_usergroup_map` VALUES (411,8);
 INSERT INTO `plo1j_user_usergroup_map` VALUES (412,7);
+INSERT INTO `plo1j_user_usergroup_map` VALUES (413,2);
+INSERT INTO `plo1j_user_usergroup_map` VALUES (413,7);
 /*!40000 ALTER TABLE `plo1j_user_usergroup_map` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10608,7 +10823,7 @@ CREATE TABLE `plo1j_users` (
   KEY `idx_block` (`block`),
   KEY `username` (`username`),
   KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=413 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=414 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10617,13 +10832,14 @@ CREATE TABLE `plo1j_users` (
 
 LOCK TABLES `plo1j_users` WRITE;
 /*!40000 ALTER TABLE `plo1j_users` DISABLE KEYS */;
-INSERT INTO `plo1j_users` VALUES (406,'Super User','chris','chris@ammonitenetworks.com','5f460b1beebe38e8e17a3148cc9fd421:RV41a5cfIrXBQ8qTt6f3vRGco7Dgdrpn','deprecated',0,1,'2012-10-25 16:34:55','2012-11-05 02:50:55','0','','0000-00-00 00:00:00',0);
+INSERT INTO `plo1j_users` VALUES (406,'Super User','chris','chris@ammonitenetworks.com','5f460b1beebe38e8e17a3148cc9fd421:RV41a5cfIrXBQ8qTt6f3vRGco7Dgdrpn','deprecated',0,1,'2012-10-25 16:34:55','2012-12-14 23:44:35','0','','0000-00-00 00:00:00',0);
 INSERT INTO `plo1j_users` VALUES (407,'Evan Fillman','efillman','efillman@dioscouri.com','df0cf8217d8033a5ce81ce03c1689115:aLmnqJKO0SXdyVleZHHVTqPN2h4IAxa7','',0,1,'2012-10-25 16:52:55','0000-00-00 00:00:00','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 INSERT INTO `plo1j_users` VALUES (408,'Lukas Polak ','lukas','lpolak@dioscouri.com','f26397322c365e48fb15d3bf1bdd3be1:cW3c89M7ztvYalCtXxmyD4P3TzQjSe1q','',0,0,'2012-10-25 16:58:31','0000-00-00 00:00:00','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 INSERT INTO `plo1j_users` VALUES (409,'Chris Paschen','cpaschen','cpaschen@dioscouri.com','841ea9745aad11609a2d49f2b4e1ca6a:KKzPANWW7B16OJuSIiH0CuA1Dwsz7rcc','',0,0,'2012-10-25 17:08:57','0000-00-00 00:00:00','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 INSERT INTO `plo1j_users` VALUES (410,'Rafael Diaz-Tushman','rafael','rdiaztushman@dioscouri.com','1db5d1648d4dae90b73097f44c66591c:NlSJiUTOwJPIMm7rFJvHmQG5aaFzeF1z','',0,0,'2012-10-31 02:03:26','0000-00-00 00:00:00','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 INSERT INTO `plo1j_users` VALUES (411,'normal user','normal','normal01@normal.com','f4d5e6b55037c1e8199ed38ce3d760f0:DqCvT6VCJT30I9xsFnrCKXgbpthSSEg1','',0,0,'2012-11-04 17:01:42','2012-11-04 21:48:16','','{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}','0000-00-00 00:00:00',0);
 INSERT INTO `plo1j_users` VALUES (412,'Christopher  French','fakeuser@fakesuser.com','fakeuser@fakesuser.com','8664e26d2e43c4b04dac7bec308e8aa3:2Y0NpzTn8oGdzLt5JFrlz4zDvyQX0N1R','deprecated',0,0,'2012-11-04 21:59:01','2012-11-05 02:50:50','','{}','0000-00-00 00:00:00',0);
+INSERT INTO `plo1j_users` VALUES (413,'Awesome  Sauce','newuser@emailaddress.com','newuser@emailaddress.com','5503a76dd66c6c5e0109d49c3cbab26c:HOVlBHWB7tYkjj3IhDvxcjptzCBIAx45','deprecated',0,0,'2012-11-05 04:15:38','2012-11-05 04:15:40','','{}','0000-00-00 00:00:00',0);
 /*!40000 ALTER TABLE `plo1j_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10734,4 +10950,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-11-04 19:39:47
+-- Dump completed on 2012-12-14 23:46:45

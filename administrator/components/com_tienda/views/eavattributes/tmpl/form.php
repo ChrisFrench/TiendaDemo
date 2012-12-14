@@ -25,7 +25,7 @@ JFilterOutput::objectHTMLSafe( $row );
 					</td>
 				</tr>
                 <tr>
-                    <td style="width: 100px; text-align: right;" class="key">
+                    <td style="width: 100px;" class="key">
                         <label for="enabled">
                         <?php echo JText::_('COM_TIENDA_ENABLED'); ?>:
                         </label>
@@ -99,9 +99,31 @@ JFilterOutput::objectHTMLSafe( $row );
 						</label>
 					</td>
 					<td>
-						<?php echo TiendaSelect::booleans(@$row->eavattribute_required, 'eavattribute_required') ?>
+						<?php echo TiendaSelect::btbooleanlist( 'eavattribute_required', '', @$row->eavattribute_required ); ?>
 					</td>
 				</tr>
+                <tr>
+                    <td class="dsc-key">
+                        <?php echo JText::_('COM_TIENDA_FORMAT_STRFTIME'); ?>:
+                    </td>
+                    <td class="dsc-value">
+                        <input type="text" name="eavattribute_format_strftime" id="eavattribute_format_strftime" value="<?php echo @$row->eavattribute_format_strftime; ?>" size="30" maxlength="250" />
+                        <p class="dsc-tip">
+                        <?php echo JText::_('COM_TIENDA_FORMAT_STRFTIME_TIP'); ?>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="dsc-key">
+                        <?php echo JText::_('COM_TIENDA_FORMAT_DATE'); ?>:
+                    </td>
+                    <td class="dsc-value">
+                        <input type="text" name="eavattribute_format_date" id="eavattribute_format_date" value="<?php echo @$row->eavattribute_format_date; ?>" size="30" maxlength="250" />
+                        <p class="dsc-tip">
+                        <?php echo JText::_('COM_TIENDA_FORMAT_DATE_TIP'); ?>
+                        </p>
+                    </td>
+                </tr>
 			</table>
 			<input type="hidden" name="id" value="<?php echo @$row->eaventity_type; ?>" />
 			<input type="hidden" name="task" value="" />

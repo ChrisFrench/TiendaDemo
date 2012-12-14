@@ -124,7 +124,10 @@ function tiendaDisableShippingAddressControls(checkbox, form)
 {
     
 	var disable = false;
-    if (checkbox.checked){disable = true;tiendaGetShippingRates( 'onCheckoutShipping_wrapper', form );}  
+    if (checkbox.checked){
+        disable = true;
+        tiendaGetShippingRates( 'onCheckoutShipping_wrapper', form );
+    }
     
     var fields = "address_name;address_id;title;first_name;middle_name;last_name;company;tax_number;address_1;address_2;city;country_id;zone_id;postal_code;phone_1;phone_2;fax";
     var fieldList = fields.split(';');
@@ -158,6 +161,8 @@ function tiendaDisableShippingAddressControls(checkbox, form)
             }
         }
     }
+    
+    tiendaDeleteGrayDivs();
 }
 
 function tiendaManageShippingRates()
@@ -308,11 +313,15 @@ function tiendaCheckoutAutomaticShippingRatesUpdate( obj_id )
  */
 function tiendaCheckPassword( container, form, psw, min_length, req_num, req_alpha, req_spec )
 {
+    val_errors = [];
 	var pass_ok = true;
 		
 	act_pass = $( psw ).get( 'value' );
 	if( act_pass.length < min_length ) // password is not long enough
 	{
+	    str = Joomla.JText._('COM_TIENDA_PASSWORD_MIN_LENGTH');
+	    str = str.replace('%s',min_length);
+	    val_errors.push(str);
 		pass_ok = false;
 	}
 	else
@@ -320,19 +329,34 @@ function tiendaCheckPassword( container, form, psw, min_length, req_num, req_alp
 		if( req_num ) // checks, if the password contains a number
 		{
 			var patt_num = /\d/;
-			pass_ok = patt_num.test( act_pass );
+			has_num = patt_num.test( act_pass );
+			if (!has_num) {
+			    str = Joomla.JText._('COM_TIENDA_PASSWORD_REQ_NUMBER');
+			    val_errors.push(str);
+			    pass_ok = false;
+			}
 		}
 		
 		if( pass_ok && req_alpha ) // checks, if the password contains an alphabetical character
 		{
 			var patt_alpha = /[a-zA-Z]/;
-			pass_ok = patt_alpha.test( act_pass );
+			has_alpha = patt_alpha.test( act_pass );
+            if (!has_alpha) {
+                str = Joomla.JText._('COM_TIENDA_PASSWORD_REQ_ALPHA');
+                val_errors.push(str);
+                pass_ok = false;
+            }
 		}
 
 		if( pass_ok && req_spec ) // checks, if the password contains a special character ?!@#$%^&*{}[]()-=+.,:\\/\"<>'_;|
 		{
 			var patt_spec = /[\\/\|_\-\+=\.\"':;\[\]~<>!@?#$%\^&\*()]/;
-			pass_ok = patt_spec.test( act_pass );
+			has_special = patt_spec.test( act_pass );
+            if (!has_special) {
+                str = Joomla.JText._('COM_TIENDA_PASSWORD_REQ_SPEC');
+                val_errors.push(str);
+                pass_ok = false;
+            }
 		}
 	}
 
@@ -347,7 +371,9 @@ function tiendaCheckPassword( container, form, psw, min_length, req_num, req_alp
 	{
 		val_img 	= 'remove_16.png';
 		val_alt	 	= Joomla.JText._( 'COM_TIENDA_ERROR' );
+		val_errors_string = val_errors.join(".\n");
 		val_text 	= Joomla.JText._( 'COM_TIENDA_PASSWORD_INVALID' );
+		val_text    = val_text + ' ' + val_errors_string;
 		val_class	= 'validation-fail';
 	}
 
@@ -419,4 +445,52 @@ function tiendaHideInfoCreateAccount( )
 	$('create_account').addEvent('change', function() {
 		$('tienda_user_additional_info').toggleClass('hidden');
 	});
+}
+
+function tiendaGetPaymentOptions(container, form, msg, callback) {
+    var payment_plugin = $$('input[name=payment_plugin]:checked');
+
+    if (payment_plugin) {
+        payment_plugin = payment_plugin.value;
+    }       
+        
+    var str = tiendaGetFormInputData( form );
+    var url = 'index.php?option=com_tienda&view=checkout&task=updatePaymentOptions&format=raw';
+    
+    tiendaGrayOutAjaxDiv('onCheckoutPayment_wrapper', Joomla.JText._('COM_TIENDA_UPDATING_PAYMENT_METHODS'));
+    
+    // execute Ajax request to server
+    var a = new Request({
+        url : url,
+        method : "post",
+        data : {
+            "elements" : JSON.encode(str)
+        },
+        onSuccess : function(response) {
+            var resp = JSON.decode(response, false);
+            $( container ).set('html',  resp.msg );
+            
+            if (typeof callback == 'function') {
+                callback();
+            }
+            return true;
+        },
+        onFailure : function(response) {
+            tiendaDeletePaymentGrayDiv();
+            tiendaDeleteAddressGrayDiv();
+            tiendaDeleteShippingGrayDiv();
+        },
+        onException : function(response) {
+            tiendaDeletePaymentGrayDiv();
+            tiendaDeleteAddressGrayDiv();
+            tiendaDeleteShippingGrayDiv();
+        }
+    }).send();  
+
+    if (payment_plugin) {
+        $$('#onCheckoutPayment_wrapper input[name=payment_plugin]').each(function(e) {
+            if (e.get('value') == payment_plugin)
+                e.set('checked', true);
+        });
+    }
 }
