@@ -2,3 +2,7 @@ configuration.php
 /cache/
 /administrator/cache/
 /tmp/
+/cache
+/administrator/cache
+/tmp
+.htaccess
